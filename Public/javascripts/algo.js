@@ -81,7 +81,13 @@ Unit.prototype.year		= function (msec) {
 //
 // =================================================================
 var Result = function(n, t, sl) {
-	var res = this;
+	var res			= this,
+		tag_info	= undefined,
+		block_info	= undefined;
+	/*
+		config
+	*/
+	var TAG_LIMIT	= 10;
 	/* **************************************************** */
 	/*														*/
 	/*	topic												*/
@@ -105,27 +111,50 @@ var Result = function(n, t, sl) {
 	/*	tag													*/
 	/*														*/
 	/* **************************************************** */
-	var tmpTag	= [];
-	var revTag	= {};
-	for (var i = 0; i < res.news.length; i++) {
-		var tmpTags = res.news[i].tag;
-		for (var j = 0; j < tmpTags.length; j++) {
-			if (revTag[tmpTags[j]] == undefined) {
-				tmpTag.push(tmpTags[j]);
-				revTag[tmpTags[j]] = 0;
-			}
-			revTag[tmpTags[j]]++;
+	/*
+		tag preprocess and return message
+	*/
+	var getTagInfo = function(news) {
+		// tag info
+		var info = {
+			'array':	[],
+			'revTag':	{},
+			'length':	0
+		};
+		info.constructor.prototype.tagCount = function(tagA, tagB) {
+			return - (this.revTag[tagA] - this.revTag[tagB]);
 		}
+		// build reverse key of tag
+		var revTag	= info.revTag;
+		for (var i = 0; i < news.length; i++) {
+			var tmpTags = news[i].tag;
+			for (var j = 0; j < tmpTags.length; j++) {
+				if (revTag[tmpTags[j]] == undefined) {
+					tag_info.array.push({
+						'topic':	tmpTags[j],
+						'first':	res.news[i]
+					});
+					revTag[tmpTags[j]] = 0;
+				}
+				revTag[tmpTags[j]]++;
+			}
+		}
+		info.array.sort(info.tagCount);
+		info.length = info.array.length;
+		return info;
 	}
-	var tagCount = function(tagA, tagB) {
-		return -(revTag[tagA] - revTag[tagB]);
-	}
-	tmpTag.sort(tagCount);
+	/*
+		tag selection algorithm
+	*/
 	var tagSelectAlgo = function(tag) {
 		// todo
 		return tag;
 	}
-	res.Tag = tagSelectAlgo(tmpTag);
+	/*
+		tag
+	*/
+	tag_info	= getTagInfo(res.news);
+	res.tag		= tagSelectAlgo(tag_info.array);
 
 	/* **************************************************** */
 	/*														*/
@@ -236,9 +265,10 @@ var Result = function(n, t, sl) {
 		try possible way
 	*/
 	var count = function(news, slice_func) {
-		var info = {};
-		info.array	= [];
-		info.dist	= {};
+		var info = {
+			'array':	[],
+			'dist':		{}
+		};
 		// hash every news in timeline block
 		for (var i = 0; i < news.length; i++) {
 			var id = slice_func(news[i].time);
@@ -267,7 +297,7 @@ var Result = function(n, t, sl) {
 	}
 	var level = 0;
 	for (level = 1; level < time_slice.length; level++) {
-		var block_info = count(res.news, time_slice[i]);
+		block_info = count(res.news, time_slice[i]);
 		if (block_info.length <= slice_limit)
 			break ;
 	}
@@ -275,28 +305,43 @@ var Result = function(n, t, sl) {
 		throw 'Error: no match time slice!';
 	// process block_info into block
 	res.block = [];
+	block_info.revBlock = {};
 	for (var i = 0; i < block_info.length; i++) {
 		var b = {
-			'isdelimeter': false,
-			'isopen': false,
-			'start': 0,
-			'end': 0,
-			'level': level,
-			'news': [],
-			'event': []
+			'isdelimeter':	false,
+			'isopen':		false,
+			'start':		0,
+			'end':			0,
+			'level':		level,
+			'news':			[],
+			'incident':		[]
 		};
 		// block with news
 		var id = block_info.array[i];
 		if (id >= 0) {
 			b.start	= rev_time_slice[level](id);
-			b.end	= rev_time_slice[level](id);
+			b.end	= rev_time_slice[level](id + 1);
 			b.news	= block_info.dist[id];
+			block_info.revBlock[id] = res.block.length;
 		}
 		// vacant
 		else {
 			b.isdelimeter = true;
 		}
 		res.block.push(b);
+	}
+	// incident
+	for (var i = 0; i < tag_info.length && i < TAG_LIMIT; i++) {
+		var tmp = tag_info.array[i];
+		var id = time_slice[level](tmp.first.time);
+		var e = {
+			'isbranch': false,
+			'time': tmp.first.time,
+			'topic': tmp.topic
+		};
+		if (TAG_LIMIT / 2 <= i)
+			e.isbranch = true;
+		res.block[block_info.revBlock[id]].incident.push(e);
 	}
 }
 var result = new Result(news, tag);
