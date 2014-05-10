@@ -83,19 +83,19 @@ Unit.prototype.week		= function () { return 604800000; }
 // month:	[28-31] * 86400 * 1000 ms
 Unit.prototype.month	= function (msec) {
 	var day = this.day(),
-		date = new MyDate(msec),
+		date = new MyDate(msec);
 	return date.month_maxday * day;
 }
 // season:	[90-92] * 86400 * 1000 ms
 Unit.prototype.season	= function (msec) {
 	var day = this.day(),
-		date = new MyDate(msec),
+		date = new MyDate(msec);
 	return date.season_maxday * day;
 }
 // year:	[365|366] * 86400 * 1000 ms
 Unit.prototype.year		= function (msec) {
 	var day = this.day(),
-		date = new MyDate(msec),
+		date = new MyDate(msec);
 	return date.year_maxday * day;
 }
 
@@ -277,6 +277,15 @@ var Result = function(n, t, sl) {
 	}
 	res.news	= n;
 	res.news.sort(newsTime);
+	for (var i = 0; i < res.news.length; i++)
+		if (typeof(res.news[i].time) == 'string') {
+			var tmp = res.news[i].time.match(/\d+/g);
+			var t = (new Date(
+				tmp[0], tmp[1], tmp[2], tmp[3], tmp[4])).getTime();
+			if (isNaN(t)) t = (new Date(
+				tmp[0], tmp[1], tmp[2])).getTime();
+			res.news[i].time = t;
+		}
 
 	/* **************************************************** */
 	/*														*/
@@ -297,7 +306,7 @@ var Result = function(n, t, sl) {
 			'length':	0	// the number of tags
 		};
 		info.constructor.prototype.tagCount = function(tagA, tagB) {
-			return - (this.revTag[tagA] - this.revTag[tagB]);
+			return - (info.revTag[tagA] - info.revTag[tagB]);
 		}
 		// build reverse key of the tags
 		var revTag	= info.revTag;
@@ -305,7 +314,7 @@ var Result = function(n, t, sl) {
 			var tags = news[i].tag;
 			for (var j = 0; j < tags.length; j++) {
 				if (revTag[tags[j]] == undefined) {
-					tag_info.array.push({
+					info.array.push({
 						'topic':	tags[j],
 						'first':	res.news[i]
 					});
@@ -352,8 +361,12 @@ var Result = function(n, t, sl) {
 		}
 		// sort them with time nondecreasingly
 		info.array.sort();
+		var isInt = function isInt(n) {
+		   return typeof (n === 'number') && (n % 1 == 0);
+		}
 		for (var id in info.dist) {
-			info.dist[id].sort(newsTime);
+			if (isInt(id))
+				info.dist[id].sort(newsTime);
 		}
 		// count length
 		var tmp = [];
@@ -375,12 +388,12 @@ var Result = function(n, t, sl) {
 		for (var i = 1; i + 1 < tsl.length; i++) {
 			info = getBlockInfo(news, tsl[i].look_func);
 			if (info.length <= SLICE_LIMIT) {
-				info.level		= i;
-				info.spec_slice	= tsl[i];
-				info.revBlock	= {};
-				for (var j = 0; j < info.length; i++) {
+				info['level']		= i;
+				info['spec_slice']	= tsl[i];
+				info['revBlock']	= {};
+				for (var j = 0; j < info.length; j++) {
 					if (info.array[j] >= 0)
-						info.revBlock[id] = j;
+						info.revBlock[info.array[j]] = j;
 				}
 				return info;
 			}
@@ -388,7 +401,7 @@ var Result = function(n, t, sl) {
 		info.level = tsl.length;
 		return info;
 	}
-	block_info = count(req.news, time_slice);
+	block_info = count(res.news, time_slice);
 	if (block_info.level == time_slice.length)
 		throw 'Error: no match time slice!';
 	// process block_info into block
@@ -399,15 +412,15 @@ var Result = function(n, t, sl) {
 			'isopen':		false,
 			'start':		0,
 			'end':			0,
-			'level':		level,
+			'level':		block_info.level,
 			'news':			[],
 			'incident':		[]
 		};
 		// block with news
 		var id = block_info.array[i];
 		if (id >= 0) {
-			b.start	= time_slice[level].rev_func(id);
-			b.end	= time_slice[level].rev_func(id + 1);
+			b.start	= time_slice[b.level].rev_func(id);
+			b.end	= time_slice[b.level].rev_func(id + 1);
 			b.news	= block_info.dist[id];
 		}
 		// vacant
@@ -429,7 +442,7 @@ var Result = function(n, t, sl) {
 		var info = [];
 		for (var i = 0; i < tinfo.length && i < TAG_LIMIT; i++) {
 			var tmp = tinfo.array[i];
-			var id = time_slice[level].look_func(tmp.first.time);
+			var id = time_slice[b.level].look_func(tmp.first.time);
 			var inci = {
 				'bid': binfo.revBlock[id],
 				'incident': {
@@ -442,12 +455,15 @@ var Result = function(n, t, sl) {
 				inci.incident.isbranch = true;
 			info.push(inci);
 		}
+		return info;
 	}
-	inci_info = incidentSelectAlgo(tag_info);
+	console.log(block_info.revBlock);
+	inci_info = incidentSelectAlgo(tag_info, block_info);
 	for (var i = 0; i < inci_info.length; i++) {
+		// console.log(inci_info[i].bid, res.block);
 		res.block[inci_info[i].bid].incident.push(
 			inci_info[i].incident
 		);
 	}
 }
-var result = new Result(news, tag);
+var result = new Result(data, tag);

@@ -2,15 +2,15 @@
 <head>
 	<meta charset="utf-8">
 	<title><%= title %></title>
-	<link rel="stylesheet" href="public/stylesheets/newsline.css" media="screen">
+	<link rel="stylesheet" href="/public/stylesheets/newsline.css" media="screen">
 </head>
 <body>
 <!-- write what you want -->
 <script type="text/javascript">
-	var data	= <%= news_list %>;
-	var tag		= <%= news_tag %>;
+	var data	= <%-JSON.stringify(news_list)%>;
+	var tag		= '<%= news_tag %>';
 </script>
-<script type="text/javascript" src="public/javascripts/algo.js"></script>
-<script type="text/javascript" src="public/javascripts/newsline.js"></script>
+<script type="text/javascript" src="/public/javascripts/algo.js"></script>
+<script type="text/javascript" src="/public/javascripts/newsline.js"></script>
 </body>
 </html>

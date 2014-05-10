@@ -15,7 +15,7 @@ module.exports.readByTag = function(tag, callback) {
     
       // Locate all the entries using find
       collection.find({tag:{$in:[str]}}).toArray(function(err, data) {
-        console.log(data);
+        //console.log(data);
         		
 		callback(data);
         db.close();
