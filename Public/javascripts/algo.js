@@ -1,7 +1,36 @@
 // =================================================================
 //
 //	MyDate Object:
-//		judge max days of the specific month, season, and year.
+//		judge max days of the specific month, season, or year.
+//
+//	Arguments:
+//		msec	- UNIX time in UTC+0
+//
+//	Public Members:
+//		sec				- the seconds (0-59),
+//							according to your UTC timezone
+//		min				- the minutes (0-59),
+//							according to your UTC timezone
+//		hr				- the hours (0-23),
+//							according to your UTC timezone
+//		day				- the date (1-31),
+//							according to your UTC timezone
+//		week			- the day (0-6),
+//							according to your UTC timezone
+//		month			- the month (1-12),
+//							according to your UTC timezone
+//		year			- the year (4 digits),
+//							according to your UTC timezone
+//		isleap			- leap year or not
+//		month_maxday	- the number of days of this month
+//		season_maxday	- the number of days of this season
+//							January	to March	- 90 or 91 days
+//							April to June		- 91 days
+//							July to September	- 92 days
+//							October	to December	- 92 days
+//		year_maxday		- the number of days of this year
+//							leap year	- 366 days
+//							common year	- 365 days
 //
 // =================================================================
 var MyDate = function(msec) {
@@ -29,15 +58,10 @@ var MyDate = function(msec) {
 	else if ((m <= 7 && m % 2) || (m > 7 && m % 2 == 0))
 		time.month_maxday = 31;
 	// time.season_maxday: the total days of a season
-	//		January	- March:		90 or 91
-	//		April	- June:			91
-	//		July	- September:	92
-	//		October	- December:		92
 	time.season_maxday = 90 + (m == 2 && time.isleap) + (m > 3) + (m > 6);
 	// time.year_maxday
 	time.year_maxday = (time.isleap)? 366: 365;
 };
-var UNIX = new MyDate(0);
 
 // =================================================================
 //
@@ -77,17 +101,162 @@ Unit.prototype.year		= function (msec) {
 
 // =================================================================
 //
-//	Result Object
+//	Result Object:
+//		Process raw data of news and pass this object to present
+//
+//	Arguments:
+//		n	- raw data of news
+//		t	- tag name (topic)
+//		sl	- maximum number of slice, default is set to be 10
+//
+//	Public Members:
 //
 // =================================================================
 var Result = function(n, t, sl) {
+	/* **************************************************** */
+	/*														*/
+	/*	useful private variable								*/
+	/*														*/
+	/* **************************************************** */
+	/*
+		alias & declare
+	*/
 	var res			= this,
+		UNIX		= new MyDate(0),
+		unit		= new Unit(),
 		tag_info	= undefined,
-		block_info	= undefined;
+		block_info	= undefined,
+		inci_info	= undefined;
 	/*
 		config
 	*/
-	var TAG_LIMIT	= 10;
+	var TAG_LIMIT	= 10,
+		SLICE_LIMIT = 10;
+	// custom slice limit
+	if (sl) SLICE_LIMIT = sl;
+
+	/* **************************************************** */
+	/*														*/
+	/*	time slice:											*/
+	/*		15 min (special)								*/
+	/*		1 hr											*/
+	/*		6 hrs											*/
+	/*		1 day											*/
+	/*		1 week											*/
+	/*		1 month											*/
+	/*		1 season (3 months)								*/
+	/*		1 year											*/
+	/*		2 years (special)								*/
+	/*	has:												*/
+	/*		look_func	- from time to id					*/
+	/*		rev_func	- from id to time					*/
+	/*														*/
+	/* **************************************************** */
+	var time_slice = [
+		// (special) 15 min
+		{
+			look_func: function (msec) {
+				var slice = unit.min() * 15;
+				return Math.floor(msec / slice);
+			},
+			rev_func: function (id) {
+				var slice = unit.min() * 15;
+				return slice * id;
+			}
+		},
+		// 1 hr
+		{
+			look_func: function (msec) {
+				var slice = unit.hr();
+				return Math.floor(msec / slice);
+			},
+			rev_func: function (id) {
+				var slice = unit.hr();
+				return slice * id;
+			}
+		},
+		// 6 hrs
+		{
+			look_func: function (msec) {
+				var slice = unit.hr() * 6;
+				return Math.floor(msec / slice);
+			},
+			rev_func: function (id) {
+				var slice = unit.hr() * 6;
+				return slice * id;
+			}
+		},
+		// 1 day
+		{
+			look_func: function (msec) {
+				var slice = unit.day();
+				return Math.floor(msec / slice);
+			},
+			rev_func: function (id) {
+				var slice = unit.day();
+				return slice * id;
+			}
+		},
+		// 1 week
+		{
+			look_func: function (msec) {
+				var slice = unit.week();
+				msec += UNIX.week * unit.day();
+				return Math.floor(msec / slice);
+			},
+			rev_func: function (id) {
+				var slice = unit.week();
+				return slice * id - UNIX.week * unit.day();
+			}
+		},
+		// 1 month
+		{
+			look_func: function (msec) {
+				var date = new MyDate(msec);
+				return (date.year - UNIX.year) * 12 +
+							(date.month - 1);
+			},
+			rev_func: function (id) {
+				var y = Math.floor(id / 12) + UNIX.year,
+					m = id % 12;
+				return Date.UTC(y, m);
+			}
+		},
+		// 1 season
+		{
+			look_func: function (msec) {
+				var date = new MyDate(msec);
+				return (date.year - UNIX.year) * 4 +
+							Math.floor((date.month - 1) / 3);
+			},
+			rev_func: function (id) {
+				var y = Math.floor(id / 4) + UNIX.year,
+					m = id % 4;
+				return Date.UTC(y, m);
+			}
+		},
+		// 1 year
+		{
+			look_func: function (msec) {
+				return date.year - UNIX.year;
+			},
+			rev_func: function (id) {
+				var y = id + UNIX.year;
+				return Date.UTC(y, 0);
+			}
+		},
+		// 2 years
+		{
+			look_func: function (msec) {
+				return Math.floor((date.year - UNIX.year) / 2);
+			},
+			rev_func: function (id) {
+				var y = id * 2 + UNIX.year;
+				return Date.UTC(y, 0);
+			}
+		}
+	];
+
 	/* **************************************************** */
 	/*														*/
 	/*	topic												*/
@@ -100,6 +269,9 @@ var Result = function(n, t, sl) {
 	/*	news												*/
 	/*														*/
 	/* **************************************************** */
+	/*
+		sort news with time nondecreasingly
+	*/
 	var newsTime = function(newsA, newsB) {
 		return newsA.time - newsB.time;
 	}
@@ -117,26 +289,29 @@ var Result = function(n, t, sl) {
 	var getTagInfo = function(news) {
 		// tag info
 		var info = {
-			'array':	[],
-			'revTag':	{},
-			'length':	0
+			'array':	[],	// save tag information
+							//		topic: tag name
+							//		first: a news where the tag
+							//				appears first time
+			'revTag':	{},	// lookup from tag to array's position
+			'length':	0	// the number of tags
 		};
 		info.constructor.prototype.tagCount = function(tagA, tagB) {
 			return - (this.revTag[tagA] - this.revTag[tagB]);
 		}
-		// build reverse key of tag
+		// build reverse key of the tags
 		var revTag	= info.revTag;
 		for (var i = 0; i < news.length; i++) {
-			var tmpTags = news[i].tag;
-			for (var j = 0; j < tmpTags.length; j++) {
-				if (revTag[tmpTags[j]] == undefined) {
+			var tags = news[i].tag;
+			for (var j = 0; j < tags.length; j++) {
+				if (revTag[tags[j]] == undefined) {
 					tag_info.array.push({
-						'topic':	tmpTags[j],
+						'topic':	tags[j],
 						'first':	res.news[i]
 					});
-					revTag[tmpTags[j]] = 0;
+					revTag[tags[j]] = 0;
 				}
-				revTag[tmpTags[j]]++;
+				revTag[tags[j]]++;
 			}
 		}
 		info.array.sort(info.tagCount);
@@ -151,7 +326,7 @@ var Result = function(n, t, sl) {
 		return tag;
 	}
 	/*
-		tag
+		process tag
 	*/
 	tag_info	= getTagInfo(res.news);
 	res.tag		= tagSelectAlgo(tag_info.array);
@@ -161,110 +336,7 @@ var Result = function(n, t, sl) {
 	/*	CALCULATE time block								*/
 	/*														*/
 	/* **************************************************** */
-	var unit = new Unit();
-	var time_slice = [
-		// (special) 15 min
-		function (msec) {
-			var slice	= unit.min() * 15;
-			return Math.floor(msec / slice);
-		},
-		// 1 hr
-		function (msec) {
-			var slice	= unit.hr();
-			return Math.floor(msec / slice);
-		},
-		// 6 hrs
-		function (msec) {
-			var slice	= unit.hr() * 6;
-			return Math.floor(msec / slice);
-		},
-		// 1 day
-		function (msec) {
-			var slice	= unit.day();
-			return Math.floor(msec / slice);
-		},
-		// 1 week
-		function (msec) {
-			var slice	= unit.week();
-			msec += UNIX.week * unit.day();
-			return Math.floor(msec / slice);
-		},
-		// 1 month
-		function (msec) {
-			var date = new MyDate(msec);
-			return (date.year - UNIX.year) * 12 + (date.month - 1);
-		},
-		// 1 season
-		function (msec) {
-			var date = new MyDate(msec);
-			return (date.year - UNIX.year) * 4 + Math.floor((date.month - 1) / 3);
-		},
-		// 1 year
-		function (msec) {
-			return date.year - UNIX.year;
-		},
-		// (special) 2 years
-		function (msec) {
-			return Math.floor((date.year - UNIX.year) / 2);
-		}
-	];
-	var rev_time_slice = [
-		// (special) 15 min
-		function (id) {
-			var slice	= unit.min() * 15;
-			return slice * id;
-		},
-		// 1 hr
-		function (id) {
-			var slice	= unit.hr();
-			return slice * id;
-		},
-		// 6 hrs
-		function (id) {
-			var slice	= unit.hr() * 6;
-			return slice * id;
-		},
-		// 1 day
-		function (id) {
-			var slice	= unit.day();
-			return slice * id;
-		},
-		// 1 week
-		function (id) {
-			// todo
-			var slice	= unit.week();
-			return slice * id - UNIX.week * unit.day();
-		},
-		// 1 month
-		function (id) {
-			var y = Math.floor(id / 12) + UNIX.year,
-				m = id % 12;
-			return Date.UTC(y, m);
-		},
-		// 1 season
-		function (id) {
-			var y = Math.floor(id / 4) + UNIX.year,
-				m = id % 4;
-			return Date.UTC(y, m);
-		},
-		// 1 year
-		function (id) {
-			var y = id + UNIX.year;
-			return Date.UTC(y, 0);
-		},
-		// (special) 2 years
-		function (id) {
-			var y = id * 2 + UNIX.year;
-			return Date.UTC(y, 0);
-		}
-	];
-	// setup maximum number of slice
-	var slice_limit = 10;
-	if (sl) slice_limit = sl;
-	/*
-		try possible way
-	*/
-	var count = function(news, slice_func) {
+	var getBlockInfo = function(news, slice_func) {
 		var info = {
 			'array':	[],
 			'dist':		{}
@@ -295,17 +367,32 @@ var Result = function(n, t, sl) {
 		info.length = info.array.length;
 		return info;
 	}
-	var level = 0;
-	for (level = 1; level < time_slice.length; level++) {
-		block_info = count(res.news, time_slice[i]);
-		if (block_info.length <= slice_limit)
-			break ;
+	/*
+		try possible way
+	*/
+	var count = function(news, tsl) {
+		var info;
+		for (var i = 1; i + 1 < tsl.length; i++) {
+			info = getBlockInfo(news, tsl[i].look_func);
+			if (info.length <= SLICE_LIMIT) {
+				info.level		= i;
+				info.spec_slice	= tsl[i];
+				info.revBlock	= {};
+				for (var j = 0; j < info.length; i++) {
+					if (info.array[j] >= 0)
+						info.revBlock[id] = j;
+				}
+				return info;
+			}
+		}
+		info.level = tsl.length;
+		return info;
 	}
-	if (level == time_slice.length)
+	block_info = count(req.news, time_slice);
+	if (block_info.level == time_slice.length)
 		throw 'Error: no match time slice!';
 	// process block_info into block
 	res.block = [];
-	block_info.revBlock = {};
 	for (var i = 0; i < block_info.length; i++) {
 		var b = {
 			'isdelimeter':	false,
@@ -319,10 +406,9 @@ var Result = function(n, t, sl) {
 		// block with news
 		var id = block_info.array[i];
 		if (id >= 0) {
-			b.start	= rev_time_slice[level](id);
-			b.end	= rev_time_slice[level](id + 1);
+			b.start	= time_slice[level].rev_func(id);
+			b.end	= time_slice[level].rev_func(id + 1);
 			b.news	= block_info.dist[id];
-			block_info.revBlock[id] = res.block.length;
 		}
 		// vacant
 		else {
@@ -330,18 +416,38 @@ var Result = function(n, t, sl) {
 		}
 		res.block.push(b);
 	}
-	// incident
-	for (var i = 0; i < tag_info.length && i < TAG_LIMIT; i++) {
-		var tmp = tag_info.array[i];
-		var id = time_slice[level](tmp.first.time);
-		var e = {
-			'isbranch': false,
-			'time': tmp.first.time,
-			'topic': tmp.topic
-		};
-		if (TAG_LIMIT / 2 <= i)
-			e.isbranch = true;
-		res.block[block_info.revBlock[id]].incident.push(e);
+	/* **************************************************** */
+	/*														*/
+	/*	incident											*/
+	/*														*/
+	/* **************************************************** */
+	/*
+		incident selection algorithm
+	*/
+	var incidentSelectAlgo = function(tinfo, binfo) {
+		// todo
+		var info = [];
+		for (var i = 0; i < tinfo.length && i < TAG_LIMIT; i++) {
+			var tmp = tinfo.array[i];
+			var id = time_slice[level].look_func(tmp.first.time);
+			var inci = {
+				'bid': binfo.revBlock[id],
+				'incident': {
+					'isbranch': false,
+					'time': tmp.first.time,
+					'topic': tmp.topic
+				}
+			};
+			if (TAG_LIMIT / 2 <= i)
+				inci.incident.isbranch = true;
+			info.push(inci);
+		}
+	}
+	inci_info = incidentSelectAlgo(tag_info);
+	for (var i = 0; i < inci_info.length; i++) {
+		res.block[inci_info[i].bid].incident.push(
+			inci_info[i].incident
+		);
 	}
 }
 var result = new Result(news, tag);
