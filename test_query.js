@@ -7,7 +7,7 @@ var MongoClient = require('mongodb').MongoClient
     var collection = db.collection('test_Apple');
     
       // Locate all the entries using find
-      collection.find({tag:{$in:["蘋果"]}}).toArray(function(err, results) {
+      collection.find({tag:{$in:["finance"]}}).toArray(function(err, results) {
         console.log(results);
         // Let's close the db
         db.close();
