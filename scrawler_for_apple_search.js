@@ -1,12 +1,10 @@
-var cheerio = require("cheerio");
-var server = require("./Controllers/curl.js");
-var request= require("request");
-var mongodb = require('mongodb');
-var MongoClient = require('mongodb').MongoClient, format = require('util').format;
+var cheerio		= require('cheerio'),
+	server		= require('./Controllers/curl.js'),
+	request		= require('request'),
+	mongodb		= require('mongodb'),
+	MongoClient	= require('mongodb').MongoClient,
+	format		= require('util').format;
 
-
-
-//post every search page
 for(var p=1;p<=1;p++){
 	request.post(
 				'http://www.appledaily.com.tw/appledaily/search', 
@@ -101,14 +99,15 @@ for(var p=1;p<=1;p++){
 								console.log("error");
 								}
 							});
-							
-						});
-						
-						
-					}
-				}
+						}
+						else {
+							console.log('error');
+						}
+					});
+				});	
+			}
+		}
 	);
-
 }
 
 
