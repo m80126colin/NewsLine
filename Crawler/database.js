@@ -6,7 +6,7 @@ module.exports.insert = function(data, col) {
 	mongoClient.connect(url, function (err, db) {
 		if(err) throw err;
 		var collection = db.collection(col);
-		collection.save(data, function (err, docs) {
+		collection.insert(data, function (err, docs) {
 			console.log(data._id, 'insert success!');
 			db.close();
 		});
