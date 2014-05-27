@@ -1,4 +1,6 @@
 *~
 *.ini
+*.json
 mongod.lock
 journal/
+node_modules/
