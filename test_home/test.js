@@ -137,11 +137,11 @@ $(function(){
 
 
 
-var $ul =$('<ul style="padding-left:0px"></ul>');
+var $ul =$('<ul style="padding-left:0px" class="nav nav-list"></ul>');
 var $div=$('#left-column');
 
 $.each(data,function(i,item){
-	var $li=$('<li class="news-li"><div id="" _id="" img="" url="" author="" time="" tags="">' + item.title +'</div></li>');
+	var $li=$('<li class="news-li"><a href="#"><div id="" _id="" img="" url="" author="" time="" tags="">' + item.title +'</div></a></li>');
 	$li.find('div').attr('id',item.id);
 	$li.find('div').attr('_id',item._id);
 	$li.find('div').attr('img',item.img);
@@ -153,9 +153,11 @@ $.each(data,function(i,item){
 	
 	
 	$li.click(function(){
-			$('#right-column').empty();
-			$('#right-column').append('<div>'+item.title+'</div>');
-			$('#right-column').append('<div>'+item.tags+'</div>');
+			$('#right-column').find('h4').empty();
+			$('#right-column').find('#content').empty();
+			$('#right-column').find('h4').text(item.title);
+			$('#right-column').find('#content').append('<div><a href="'+ item.url +'" target="_blank">原文連結</a></div>');
+			$('#right-column').find('#content').append('<div>'+item.tags+'</div>');
 			
 			
 		});

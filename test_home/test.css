@@ -4,20 +4,21 @@
 	border:solid;
 	height:400px;
 	overflow-y:scroll;
+	padding:8px 2px 8px 10px;
 }
 
 #right-column{
 	
 	vertical-align:top;
 	display:inline-block;
-	border:solid;
+	border:solid wpx;
 	height:400px;
 	overflow-y:scroll;
 }
 
 .news-li{
 	list-style:none;
-	border:2px solid gray;
+	border:1px solid gray;
 	height:40px;
 	overflow-y:hidden;
 }
