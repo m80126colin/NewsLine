@@ -6,8 +6,7 @@
   "tags" : ["ETtoday", "酷新聞", "見報", "王令麟", "ETtoday新聞雲"],
   "author" : "ETtoday 新聞雲",
   "time" : 1317665700000.0,
-  "id" : "ettoday-1",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2a9")
+  "id" : "ettoday-1"
 },
 {
   "title" : "2011年第46屆電視金鐘奨完整入圍名單",
@@ -16,8 +15,7 @@
   "tags" : ["金鐘獎", "隋棠", "溫昇豪", "犀利人妻"],
   "author" : "ETtoday 新聞雲",
   "time" : 1319046360000.0,
-  "id" : "ettoday-3",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2aa")
+  "id" : "ettoday-3"
 },
 {
   "title" : "豪雨特報持續　北部持續濕涼",
@@ -26,8 +24,7 @@
   "tags" : ["奈格", "豪雨", "氣象局", "秋颱"],
   "author" : "ETtoday 新聞雲",
   "time" : 1317714120000.0,
-  "id" : "ettoday-7",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ab")
+  "id" : "ettoday-7"
 },
 {
   "title" : "台籍推拿師伸魔爪　多名貝里斯官夫人遭性侵",
@@ -36,8 +33,7 @@
   "tags" : ["推拿師", "性侵", "貝里斯", "官夫人"],
   "author" : "ETtoday 新聞雲",
   "time" : 1317714900000.0,
-  "id" : "ettoday-8",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ac")
+  "id" : "ettoday-8"
 },
 {
   "title" : "宣布前往生　諾貝爾醫學獎得主頒給逝者",
@@ -46,8 +42,7 @@
   "tags" : ["諾貝爾", "醫學獎"],
   "author" : "ETtoday 新聞雲",
   "time" : 1317717000000.0,
-  "id" : "ettoday-9",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ad")
+  "id" : "ettoday-9"
 },
 {
   "title" : "三大性侵累犯蔡水森被逮　剩戴銘沐在逃",
@@ -56,7 +51,6 @@
   "tags" : ["性侵累犯", "蔡水森", "戴銘沐", "任金維"],
   "author" : "ETtoday 新聞雲",
   "time" : 1317717420000.0,
-  "id" : "ettoday-10",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ae")
+  "id" : "ettoday-10"
 }
 ]
