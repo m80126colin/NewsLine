@@ -22,3 +22,9 @@
 	height:40px;
 	overflow-y:hidden;
 }
+
+#timeline-set{
+	position: absolute;
+	top: 60px;
+	z-index: -1;
+}
