@@ -1445,7 +1445,13 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
 						}
 					}
 				} else {
-					date = new Date(d/1);
+					date = new Date(
+						parseInt(d.slice(0,4), 10), 
+						parseInt(d.slice(4,6), 10) - 1, 
+						parseInt(d.slice(6,8), 10), 
+						parseInt(d.slice(8,10), 10), 
+						parseInt(d.slice(10,12), 10)
+					);
 					p.year = true;
 					p.month = true;
 					p.day = true;
