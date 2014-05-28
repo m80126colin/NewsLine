@@ -172,5 +172,6 @@ $.each(data,function(i,item){
 $div.append($ul);
 setTimeout(function(){$('body').find('.slider-container').empty().Callbacks(alert('!!!'));},3000);
 
+
 	
 });
