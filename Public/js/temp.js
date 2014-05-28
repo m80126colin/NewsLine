@@ -23,8 +23,8 @@ $(document).ready(function() {
 				time.getDate()
 				].join(',');
 			result.timeline.date.push({
-				'startDate':	time_str,
-				'endDate':		time_str,
+				'startDate':	time,
+				'endDate':		time,
 				'headline':		data[i].title,
 				'text':			'haha',
 				'asset': {
