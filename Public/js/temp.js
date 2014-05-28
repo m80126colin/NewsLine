@@ -14,7 +14,6 @@ $(document).ready(function() {
 			'era': []
 		}
 	};
-	$.getJSON('data.json', '', function (data) {
 		for (var i = 0; i < data.length; i++) {
 			var time		= new Date(data[i].time);
 			result.timeline.date.push({
@@ -39,5 +38,4 @@ $(document).ready(function() {
 			source:		result,
 			embed_id:	'timeline'
 		});
-	});
 });
