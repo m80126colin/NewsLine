@@ -1,12 +1,12 @@
 @charset utf-8;
 
-header {
+/*header {
 	background: #00DD00;
 	height: 100px;
 	width: 100%;
 	top: 0;
 	position: absolute;
-}
+}*/
 
 html, body {
 	background: #FFFFFF;
@@ -14,8 +14,9 @@ html, body {
 	font-family: "蘋果儷中黑", "Apple LiGothic", "Apple LiGothic Medium", "Microsoft JhengHei", "微軟正黑體", sans-serif;
 }
 
-.main {
-	height: 100%;
+#main {
+	margin-top:20%
+	height: 80%;
 	padding-top: 100px;
     padding-bottom: 20px;
 }
@@ -61,6 +62,10 @@ footer {
 
 /* main section*/
 /* ======================================================= */
+section {
+	overflow-y: auto;
+}
+
 #newsLine {
 	height: 100%;
 }
@@ -94,12 +99,6 @@ footer {
 	width: 60%;
 	margin-left: 30%;
 	border-bottom-right-radius: 5px;
-}
-.flag {
-	background-color: #FF3333;
-	height: 30px;
-	width: 60px;
-	border-radius: 5px;
 }
 .atTime {
 	border-top: 5px solid white;

@@ -4,86 +4,41 @@
 		<meta http-equiv="Content-Type" content ="text/html"; charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Newsline</title>
-		<link rel="stylesheet" href="public/stylesheets/bootstrap.min.css" type="text/css">
-		<link rel="stylesheet" href="public/stylesheets/style.css">
-		<link rel="stylesheet" href="public/stylesheets/newsline.css">
+		<link rel="stylesheet" type="text/css" href="public/stylesheets/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
+		<link rel="stylesheet" type="text/css" href="public/stylesheets/newsline.css">
+		<!-- always load the CSS -->
+		<link rel="stylesheet" type="text/css" href="public/stylesheets/timeline.css">
+		
 		<!--Scripts-->
+		<script type="text/javascript" src="public/javascripts/jquery.min.js"></script>
+		<script type="text/javascript" src="public/javascripts/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="public/javascripts/newsline.js"></script>
 		<script type="text/javascript" src="public/javascripts/algo.js"></script>
+		<!-- storyjs -->
+		<script type="text/javascript" src="public/javascripts/storyjs-embed.js"></script>
+		<!-- timelineJS -->
+		<script type="text/javascript" src="public/javascripts/timeline.js"></script>
 	</head>
 	<body>
 		<header>
 			<!--render after linking data-->
-			<div id="tag-topic" class="col-md-3">Tag Topic</div>
-			<div id="tags" class="col-md-9">
-				<nav id="nav1">
-					<!--render after linking data-->
-					<!--disabled: isPressed-->
-					<input class="tag_btn" type="button" disabled="false" value="太陽花" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤1" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤2" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤3" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤4" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤5" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤6" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤7" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤8" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤9" >
-					<input class="tag_btn" type="button" disabled="false" value="標籤10" >
-				</nav>
-				<nav id="nav2">
-					<!--render after linking data-->
-					<input class="tag_btn" type="button" disabled="false" value="大腸花" >
-				</nav>
-			</div>
+			<div id="tag-topic">Tag Topic</div>
 		</header>
-		<!--main-->
-		<div class="main">
-			<aside id="newsLine" class="col-md-2">
-				<span id="timeLine"></span>
-				<span id="timeHead"></span>
-				<nav class="timeBlock"></nav>
-				<nav class="timeBlock">
-					<div class="timeSeperator"></div>
-					<div class="timeZone">2014年5月10日</div>
-					<!--render where to put flags-->
-					<div class="flag"><div class="atTime"></div></div>
-				</nav>
-				<nav class="timeBlock">
-					<div class="timeSeperator"></div>
-					<div class="timeZone">2014年4月10日</div>
-				</nav>
-				<nav class="timeBlock">
-					<div class="timeSeperator"></div>
-					<div class="timeZone">2014年3月10日</div>
-				</nav>
-				<nav class="timeBlock">
-					<div class="timeSeperator"></div>
-					<div class="timeZone">2014年2月10日</div>
-				</nav>
-			</aside>
-			<section id="newsList" class="col-md-4">
-				<ul>
-					<li>TITLE 母親節假期湧車潮 國5火燒車往宜蘭塞爆</li>
-					<li>TITLE 罷免須身分證影本 吳育昇：藍綠適用</li>
-				</ul>
-			</section>
-			<section id="newsContent" class="col-md-6">
-				<a href="https://tw.news.yahoo.com/母親節假期湧車潮-國5火燒車往宜蘭塞爆-033006305.html">新聞來源連結</a>
-				<article>
-					<p class="news_title">TITLE-母親節假期湧車潮 國5火燒車往宜蘭塞爆</p>
-					<p>	MEDIA-NewTalk 新頭殼 AUTHOR-謝莉慧 SITE-綜合報導 
-						<br>
-						TIME-2014年5月10日 上午11:30</p>
-					<p>今、明兩天適逢母親節假期，返鄉及出遊車潮紛紛出籠，再加上國道5號南向14公里接近坪林路段，清晨7時發生一起貨車冒煙起火意外，火勢雖已近8時撲滅，恢復通行，但車陣仍有回堵，目前石碇到坪林段壅塞，高公局預估，車潮可能要到下午才能紓解。據高公局即時路況，雪隧現在時速僅30至40公里，國一、國三部分瓶頸路段車多。
-交通部高速公路局坪林行控中心指出，南港到坪林段目前時速低於30公里，雪隧時速約30至40公里，車潮回堵到連接石碇交流道的106號縣道。
-另外，今晨7時，國道5號在南向14公里接近坪林路段、雪隧前約50公尺處，發生一起行駛中的貨車冒煙起火意外，搶救人車趕抵現場時，小貨車已停靠路肩，車上駕駛與乘客共2人，也自行逃出，並無人員受傷。南下宜蘭方向外側1線道封閉，經消防人員灌救，8時15分狀況排除。
-但這起火燒車意外為母親節出遊返鄉車潮加碼，讓國5往宜蘭路段持續壅塞，目前雖已恢復通行，但車陣仍有回堵情況。
-不止國5路段，截至上午10時30分，國道1號、國道3號部分瓶頸路段車多壅塞，國1南下路段楊梅到新竹時速低於45公里，彰化系統路段壅塞；國3鶯歌到大溪時速低於50公里，其
-他路段目前尚稱暢通。
-					</p>
-				</article>
-			</section>
+		<!-- timeline -->
+		<div id="main">
+			<script>
+				$(document).ready(function() {
+                createStoryJS({
+                    type:       'timeline',
+                    width:      '100%',
+                    height:     '80%',
+                    lang:		'zh-tw',
+                    source:     'test.json',
+                    embed_id:   'main'
+                });
+            })
+			</script>
 		</div>
 		<footer> @ CCSP Final Project By NewsLine.
 		</footer>
