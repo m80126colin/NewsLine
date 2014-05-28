@@ -20,11 +20,14 @@ $(document).ready(function() {
 			var time_str	= [
 				time.getFullYear(),
 				time.getMonth() + 1,
-				time.getDate()
+				time.getDate(),
+				time.getHours(),
+				time.getMinutes(),
+				time.getSeconds()
 				].join(',');
 			result.timeline.date.push({
-				'startDate':	time,
-				'endDate':		time,
+				'startDate':	time_str,
+				'endDate':		time_str,
 				'headline':		data[i].title,
 				'text':			'haha',
 				'asset': {
