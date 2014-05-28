@@ -1,0 +1,136 @@
+@charset utf-8;
+
+/*header {
+	background: #00DD00;
+	height: 100px;
+	width: 100%;
+	top: 0;
+	position: absolute;
+}*/
+
+html, body {
+	background: #FFFFFF;
+	height: 100%;
+	font-family: "蘋果儷中黑", "Apple LiGothic", "Apple LiGothic Medium", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+}
+
+#main {
+	margin-top:20%
+	height: 80%;
+	padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+footer {
+	background: #00AA00;
+	color: #FFFFFF;
+	height: 20px;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+}
+
+/* header*/
+/* ======================================================= */
+#tag-topic {
+	color: #FFFFFF;
+	font-size: 60px;
+	line-height: 100px;
+}
+
+#tags {
+	height: 100%;
+}
+#nav1 {
+	top: 20px;
+	position: absolute;
+}
+#nav2 {
+	bottom: 16px;
+	position: absolute;
+}
+
+.tag_btn {
+	background: #FFFFFF;
+	border-radius: 10px;
+	margin-left: 10px;
+	border: #FFFFFF 1px solid;
+}
+
+/* ======================================================= */
+/* end header */
+
+/* main section*/
+/* ======================================================= */
+section {
+	overflow-y: auto;
+}
+
+#newsLine {
+	height: 100%;
+}
+#timeHead {
+    border-bottom: 15px solid #AA7700;
+    border-right: 30px solid white;
+    display: inline-block;
+    position: absolute;
+    margin-left: 50%;
+    z-index: 5;
+}
+#timeLine {
+	background-color: #AA7700;
+	position: absolute;
+	margin-left: 50%;
+	height: 100%;
+	width: 10px;
+	border-radius: 8px;
+}
+.timeBlock {
+	height: 20%;
+	width: 100%;
+	margin-left: 15px;
+}
+.timeZone {
+	margin-left: -10px;
+}
+.timeSeperator {
+	background-color: #AA7700;
+	height: 5px;
+	width: 60%;
+	margin-left: 30%;
+	border-bottom-right-radius: 5px;
+}
+.atTime {
+	border-top: 5px solid white;
+	border-left: 40px solid #FF3333;
+	border-bottom: 5px solid white;
+	margin-top: 10px;
+	margin-left: 60px;
+	display: inline-block;
+}
+
+/* List of news */
+#newsList {
+	height: 100%;
+	background: #EEFFBB;
+	padding: 10px;
+	border-radius: 20px;
+	border: #FFFFFF 10px solid;
+}
+li {
+	font-size: 18px;
+}
+
+/* Contents of news */
+#newsContent {
+	height: 100%;
+	background: #EEFFBB;
+	padding: 10px;
+	border-radius: 20px;
+	border: #FFFFFF 10px solid;
+}
+.news_title {
+	font-size: 24px;
+}
+/* ======================================================= */
+/* end main */
