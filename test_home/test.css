@@ -1,0 +1,23 @@
+#left-column{
+	
+	display:inline-block;
+	border:solid;
+	height:400px;
+	overflow-y:scroll;
+}
+
+#right-column{
+	
+	vertical-align:top;
+	display:inline-block;
+	border:solid;
+	height:400px;
+	overflow-y:scroll;
+}
+
+.news-li{
+	list-style:none;
+	border:2px solid gray;
+	height:40px;
+	overflow-y:hidden;
+}
