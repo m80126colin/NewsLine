@@ -6,6 +6,6 @@ var port = 5000;
 express()
 .set('view engine', 'ejs')
 .use(express.bodyParser())
-.use('/public', express.static(__dirname + '/Public'))
+.use('/public', express.static(__dirname + '/public'))
 .get('/newsline/:tag', controllers.getTag)
 .listen(port, host);
