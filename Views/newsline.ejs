@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><%= title %></title>
 	<!-- unknown -->
-	<link rel="stylesheet" href="Public/css/style.css">
+	<link rel="stylesheet" href="/Public/css/style.css">
 	<!-- bootstrap -->
-	<link rel="stylesheet" href="Public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/Public/css/bootstrap.min.css">
 	<!-- timeline -->
-	<link rel="stylesheet" href="Public/css/timeline.css">
+	<link rel="stylesheet" href="/Public/css/timeline.css">
 	<!-- self css -->
-	<link rel="stylesheet" href="Public/css/newsline.css">
+	<link rel="stylesheet" href="/Public/css/newsline.css">
 </head>
 <body>
 	<header>
@@ -25,17 +25,58 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 	</script>
 	<!-- jQuery UI -->
-	<script type="text/javascript" src="Public/js/jquery-ui.min.js">
+	<script type="text/javascript" src="/Public/js/jquery-ui.min.js">
 	</script>
 	<!-- storyJS -->
-	<script type="text/javascript" src="Public/js/storyjs-embed.js">
+	<script type="text/javascript" src="/Public/js/storyjs-embed.js">
 	</script>
 	<!-- timelineJS -->
-	<script type="text/javascript" src="Public/js/timeline.js">
+	<script type="text/javascript" src="/Public/js/timeline.js">
 	</script>
 	<!-- self JS -->
-	<script> var data = <%= news_data %>; </script>
-	<script type="text/javascript" src="Public/js/temp.js">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// process timeline format
+			var tag = '<%= tag %>';
+			$.get('/data/' + tag, '', function (data) {
+				var result = {
+					'timeline': {
+						'headline':	tag,
+						'type':		'default',
+						'text':		'',
+						'date': [],
+						'era': []
+					}
+				};
+				for (var i = 0; i < data.length; i++) {
+					var time		= new Date(data[i].time);
+					var time_str	= [
+						time.getFullYear(),
+						time.getMonth() + 1,
+						time.getDate(),
+						time.getHours(),
+						time.getMinutes(),
+						time.getSeconds()
+					].join(',');
+					result.timeline.date.push({
+						'startDate':	time_str,
+						'endDate':		time_str,
+						'headline':		'<a href="' + data[i].url + '">' + data[i].title + '</a>',
+						'text':			'<span class="label label-default">' + data[i].tags.join('</span><span class="label label-default">') + '</span>',
+						'classname': 'news_block'
+					});
+				}
+				console.log(result);
+				createStoryJS({
+					type:		'timeline',
+					width:		'100%',
+					height:		'80%',
+					lang:		'zh-tw',
+					source:		result,
+					embed_id:	'timeline'
+				});
+			});
+		});
 	</script>
 </body>
 </html>

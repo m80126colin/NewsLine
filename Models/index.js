@@ -8,7 +8,7 @@ module.exports.readByTag = function(tag, col, callback) {
 		if(err) throw err;
 		db.collection(col)
 		.find({
-			'tag': {$in: [tag]}
+			'tags': tag
 		})
 		.toArray(function (err, data) {
 			callback(data);
