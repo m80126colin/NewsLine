@@ -1,6 +1,7 @@
 *~
 *.ini
 *.json
+*.zip
 mongod.lock
 journal/
 node_modules/
