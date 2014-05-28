@@ -26,7 +26,7 @@ $(document).ready(function() {
 				time.getMonth() + 1,
 				time.getDate()
 				].join(',');
-			result.date.push({
+			result.timeline.date.push({
 				'startDate':	time_str,
 				'endDate':		time_str,
 				'headline':		data[i].title,
