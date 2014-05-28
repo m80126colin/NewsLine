@@ -14,7 +14,8 @@ $(document).ready(function() {
 			'era': []
 		}
 	};
-	$.getJSON('data2.json', function (data) {
+	$.getJSON('data2.json', '', function (data) {
+		console.log('ACK!');
 		$.each(data, function (key, val) {
 			console.log(key, val);
 		});
