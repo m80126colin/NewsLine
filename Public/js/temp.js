@@ -16,7 +16,7 @@ $(document).ready(function() {
 	};
 	$.getJSON('data2.json', '', function (data) {
 		for (var i = 0; i < data.length; i++) {
-			var time		= new Date(data[i].date);
+			var time		= new Date(data[i].time);
 			var time_str	= [
 				time.getFullYear(),
 				time.getMonth() + 1,
