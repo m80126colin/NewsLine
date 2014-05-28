@@ -14,7 +14,7 @@ $(document).ready(function() {
 			'era': []
 		}
 	};
-	$.getJSON('data2.json', '', function (data) {
+	$.getJSON('data.json', '', function (data) {
 		for (var i = 0; i < data.length; i++) {
 			var time		= new Date(data[i].time);
 			var time_str	= [

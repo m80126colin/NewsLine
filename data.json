@@ -1,4 +1,4 @@
-/* 0 */
+[
 {
   "title" : "外星人回到地球了　ETtoday.net Come home",
   "img" : "http://static.ettoday.net/images/0/d2.jpg",
@@ -7,10 +7,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317665700000.0,
   "id" : "ettoday-1",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2a9")
-}
+},
 
-/* 1 */
+
 {
   "title" : "2011年第46屆電視金鐘奨完整入圍名單",
   "img" : "http://static.ettoday.net/images/2/d2627.jpg",
@@ -19,10 +18,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1319046360000.0,
   "id" : "ettoday-3",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2aa")
-}
+},
 
-/* 2 */
+
 {
   "title" : "豪雨特報持續　北部持續濕涼",
   "img" : "http://static.ettoday.net/images/0/d8.jpg",
@@ -31,10 +29,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317714120000.0,
   "id" : "ettoday-7",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ab")
-}
+},
 
-/* 3 */
+
 {
   "title" : "台籍推拿師伸魔爪　多名貝里斯官夫人遭性侵",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -43,10 +40,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317714900000.0,
   "id" : "ettoday-8",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ac")
-}
+},
 
-/* 4 */
+
 {
   "title" : "宣布前往生　諾貝爾醫學獎得主頒給逝者",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -55,10 +51,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317717000000.0,
   "id" : "ettoday-9",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ad")
-}
+},
 
-/* 5 */
+
 {
   "title" : "三大性侵累犯蔡水森被逮　剩戴銘沐在逃",
   "img" : "http://static.ettoday.net/images/0/d9.jpg",
@@ -67,10 +62,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317717420000.0,
   "id" : "ettoday-10",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ae")
-}
+},
 
-/* 6 */
+
 {
   "title" : "日「迷你方舟」超像賽亞人逃生艇！海嘯來臨免驚",
   "img" : "http://static.ettoday.net/images/0/d14.jpg",
@@ -79,10 +73,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317728400000.0,
   "id" : "ettoday-11",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2af")
-}
+},
 
-/* 7 */
+
 {
   "title" : "神奇細菌轉換！尿液化成火箭燃料",
   "img" : "http://static.ettoday.net/images/0/d56.jpg",
@@ -91,10 +84,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317738600000.0,
   "id" : "ettoday-12",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b0")
-}
+},
 
-/* 8 */
+
 {
   "title" : "外國人不符規定　健身房撒野與本土猛男互吐口水",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -103,10 +95,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317745980000.0,
   "id" : "ettoday-13",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b1")
-}
+},
 
-/* 9 */
+
 {
   "title" : "烏龜戀上吉娃娃　一見她就狂追",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -115,10 +106,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317727680000.0,
   "id" : "ettoday-14",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b2")
-}
+},
 
-/* 10 */
+
 {
   "title" : "被逼洗屍體、撿骨　安養院看護嚇暈",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -127,10 +117,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317730320000.0,
   "id" : "ettoday-15",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b3")
-}
+},
 
-/* 11 */
+
 {
   "title" : "一天一顆「神奇藥丸」　讓頭髮不灰白",
   "img" : "http://static.ettoday.net/images/0/d60.jpg",
@@ -139,10 +128,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317742980000.0,
   "id" : "ettoday-16",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b4")
-}
+},
 
-/* 12 */
+
 {
   "title" : "歐巴馬賣炸雞？　陸山寨肯德基變OFC",
   "img" : "http://static.ettoday.net/images/0/d10.jpg",
@@ -151,10 +139,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317721200000.0,
   "id" : "ettoday-17",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b5")
-}
+},
 
-/* 13 */
+
 {
   "title" : "彌撒中撞邪？　義男子徒手挖下雙眼",
   "img" : "http://static.ettoday.net/images/0/d11.jpg",
@@ -163,10 +150,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317722640000.0,
   "id" : "ettoday-18",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b6")
-}
+},
 
-/* 14 */
+
 {
   "title" : "深圳性文化節　展商公然叫賣春藥、迷姦粉！",
   "img" : "http://static.ettoday.net/images/0/d27.jpg",
@@ -175,10 +161,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317724260000.0,
   "id" : "ettoday-20",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b7")
-}
+},
 
-/* 15 */
+
 {
   "title" : "太陽表面出現大黑子群　10月7日前可見",
   "img" : "http://static.ettoday.net/images/0/d29.bmp",
@@ -187,10 +172,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317724080000.0,
   "id" : "ettoday-21",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b8")
-}
+},
 
-/* 16 */
+
 {
   "title" : "新郎闊手擲千萬　梁詠琪西班牙喜出嫁",
   "img" : "http://static.ettoday.net/images/0/d23.jpg",
@@ -199,10 +183,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317728400000.0,
   "id" : "ettoday-22",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2b9")
-}
+},
 
-/* 17 */
+
 {
   "title" : "揭開人體免疫防線之謎　3科學家獲諾貝爾醫學獎",
   "img" : "http://static.ettoday.net/images/0/d19.jpg",
@@ -211,10 +194,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317729960000.0,
   "id" : "ettoday-23",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ba")
-}
+},
 
-/* 18 */
+
 {
   "title" : "蕾哈娜粉絲極力護主　惡搞逼穿衣老農",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -223,10 +205,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317748260000.0,
   "id" : "ettoday-24",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2bb")
-}
+},
 
-/* 19 */
+
 {
   "title" : "肉眼看不到　太陽內部圖顏色詭譎多變",
   "img" : "http://static.ettoday.net/images/0/d16.jpg",
@@ -235,10 +216,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317725820000.0,
   "id" : "ettoday-26",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2bc")
-}
+},
 
-/* 20 */
+
 {
   "title" : "MLB／王建民若留華盛頓　恐仍得與菜鳥競爭",
   "img" : "http://static.ettoday.net/images/0/d24.jpg",
@@ -247,10 +227,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317727140000.0,
   "id" : "ettoday-29",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2bd")
-}
+},
 
-/* 21 */
+
 {
   "title" : "梁詠琪小島婚禮情定西班牙郎　盼愛情事業兩得意",
   "img" : "http://static.ettoday.net/images/0/d26.jpg",
@@ -259,10 +238,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317751320000.0,
   "id" : "ettoday-30",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2be")
-}
+},
 
-/* 22 */
+
 {
   "title" : "煮麵記得換水！以免喝下防腐劑",
   "img" : "http://static.ettoday.net/images/0/d30.jpg",
@@ -271,10 +249,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317731220000.0,
   "id" : "ettoday-31",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2bf")
-}
+},
 
-/* 23 */
+
 {
   "title" : "MLB／光芒瀕臨淘汰邊緣　本季驚奇之旅恐將畫下句點",
   "img" : "http://static.ettoday.net/images/0/d28.jpg",
@@ -283,10 +260,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317729780000.0,
   "id" : "ettoday-32",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c0")
-}
+},
 
-/* 24 */
+
 {
   "title" : "警察找上門　女毒蟲心慌墜樓亡",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -295,10 +271,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317730200000.0,
   "id" : "ettoday-33",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c1")
-}
+},
 
-/* 25 */
+
 {
   "title" : "MLB／遊騎兵客場逞兇  分區系列賽聽牌",
   "img" : "http://static.ettoday.net/images/0/d31.jpg",
@@ -307,10 +282,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317737160000.0,
   "id" : "ettoday-34",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c2")
-}
+},
 
-/* 26 */
+
 {
   "title" : "想先上車「不補票」　羅大佑：生小孩才完整生命",
   "img" : "http://static.ettoday.net/images/0/d114.jpg",
@@ -319,10 +293,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317755100000.0,
   "id" : "ettoday-35",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c3")
-}
+},
 
-/* 27 */
+
 {
   "title" : "大島優子短裙現身　誘草食男大方示愛",
   "img" : "http://static.ettoday.net/images/0/d79.jpg",
@@ -331,10 +304,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317746760000.0,
   "id" : "ettoday-36",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c4")
-}
+},
 
-/* 28 */
+
 {
   "title" : "水嶋宏反串金髮妞　華服纖腰好性感",
   "img" : "http://static.ettoday.net/images/0/d34.jpg",
@@ -343,10 +315,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317751800000.0,
   "id" : "ettoday-38",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c5")
-}
+},
 
-/* 29 */
+
 {
   "title" : "她的他竟是她！雌雄莫辨仍能愛愛",
   "img" : "http://static.ettoday.net/images/0/d33.jpg",
@@ -355,10 +326,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317733380000.0,
   "id" : "ettoday-39",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c6")
-}
+},
 
-/* 30 */
+
 {
   "title" : "史上首次　諾貝爾頒獎頒給「掛掉」的人",
   "img" : "http://static.ettoday.net/images/0/d61.jpg",
@@ -367,10 +337,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317739860000.0,
   "id" : "ettoday-40",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c7")
-}
+},
 
-/* 31 */
+
 {
   "title" : "吸引26萬粉絲　杭州「最有文化失足婦」竟是男人！",
   "img" : "http://static.ettoday.net/images/0/d55.jpg",
@@ -379,10 +348,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317737640000.0,
   "id" : "ettoday-41",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c8")
-}
+},
 
-/* 32 */
+
 {
   "title" : "第48屆金馬獎入圍名單出爐　《賽德克》11項大贏家",
   "img" : "http://static.ettoday.net/images/0/d120.jpg",
@@ -391,10 +359,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317756900000.0,
   "id" : "ettoday-42",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2c9")
-}
+},
 
-/* 33 */
+
 {
   "title" : "【影】雙臉奇貓存活12年！　主人：每一天都像恩賜",
   "img" : "http://static.ettoday.net/images/0/d106.jpg",
@@ -403,10 +370,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317754800000.0,
   "id" : "ettoday-43",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ca")
-}
+},
 
-/* 34 */
+
 {
   "title" : "水嶋宏反串金髮妞　華服纖腰好性感",
   "img" : "http://static.ettoday.net/images/0/d34.jpg",
@@ -415,10 +381,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317763020000.0,
   "id" : "ettoday-44",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2cb")
-}
+},
 
-/* 35 */
+
 {
   "title" : "太危險？　黃石公園殺人熊遭安樂死",
   "img" : "http://static.ettoday.net/images/0/d32.jpg",
@@ -427,10 +392,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317737880000.0,
   "id" : "ettoday-45",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2cc")
-}
+},
 
-/* 36 */
+
 {
   "title" : "男友嘿咻逼吃屎　嬉戲性侵難證不起訴",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -439,10 +403,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317738420000.0,
   "id" : "ettoday-46",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2cd")
-}
+},
 
-/* 37 */
+
 {
   "title" : "黑潮亂流水溫高　成功漁民等不到旗魚",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -451,10 +414,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317744960000.0,
   "id" : "ettoday-47",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ce")
-}
+},
 
-/* 38 */
+
 {
   "title" : "山西師傅巧嘴吹口氣　麵團變「氣球」",
   "img" : "http://static.ettoday.net/images/0/d62.jpg",
@@ -463,10 +425,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317739500000.0,
   "id" : "ettoday-48",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2cf")
-}
+},
 
-/* 39 */
+
 {
   "title" : "世棒賽／投手大崩盤　中華遭巴拿馬狂轟吞二連敗",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -475,10 +436,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317739860000.0,
   "id" : "ettoday-49",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d0")
-}
+},
 
-/* 40 */
+
 {
   "title" : "MLB／楊恩致命陽春砲　老虎推洋基至淘汰邊緣",
   "img" : "http://static.ettoday.net/images/0/d63.jpg",
@@ -487,10 +447,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317740040000.0,
   "id" : "ettoday-50",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d1")
-}
+},
 
-/* 41 */
+
 {
   "title" : "台籍推拿師性侵官夫人？　駐貝里斯大使：偷拍顧客脫衣",
   "img" : "http://static.ettoday.net/images/0/d70.jpg",
@@ -499,10 +458,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317740940000.0,
   "id" : "ettoday-52",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d2")
-}
+},
 
-/* 42 */
+
 {
   "title" : "陳建寧嗆政府　「要把唱片當國片救」",
   "img" : "http://static.ettoday.net/images/0/d117.png",
@@ -511,10 +469,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317765600000.0,
   "id" : "ettoday-53",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d3")
-}
+},
 
-/* 43 */
+
 {
   "title" : "梁詠琪嫁人不見老爸爸　港媒爆：父女決裂20年",
   "img" : "http://static.ettoday.net/images/0/d111.jpg",
@@ -523,10 +480,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317758400000.0,
   "id" : "ettoday-54",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d4")
-}
+},
 
-/* 44 */
+
 {
   "title" : "桃園機場推平價餐飲　打造800坪美食廣場",
   "img" : "http://static.ettoday.net/images/0/d99.jpg",
@@ -535,10 +491,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317768420000.0,
   "id" : "ettoday-57",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d5")
-}
+},
 
-/* 45 */
+
 {
   "title" : "黎明婚變瞎扯章子怡　夫婦聲明：婚姻沒問題",
   "img" : "http://static.ettoday.net/images/0/d74.jpg",
@@ -547,10 +502,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317809940000.0,
   "id" : "ettoday-58",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d6")
-}
+},
 
-/* 46 */
+
 {
   "title" : "MLB／紅襪難堪淘汰　總管前途陷入混沌",
   "img" : "http://static.ettoday.net/images/0/d73.jpg",
@@ -559,10 +513,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317748260000.0,
   "id" : "ettoday-59",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d7")
-}
+},
 
-/* 47 */
+
 {
   "title" : "NBA／經紀人搧風點火　勞資談判要球員別讓步",
   "img" : "http://static.ettoday.net/images/0/d75.jpg",
@@ -571,10 +524,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317742740000.0,
   "id" : "ettoday-60",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d8")
-}
+},
 
-/* 48 */
+
 {
   "title" : "蘇嘉全農舍餘90%如何使用　陳武雄要屏縣說清楚",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -583,10 +535,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317743100000.0,
   "id" : "ettoday-61",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2d9")
-}
+},
 
-/* 49 */
+
 {
   "title" : "穿內衣唱京劇？　廣西時尚賽惹議",
   "img" : "http://static.ettoday.net/images/0/d80.jpg",
@@ -595,10 +546,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317746220000.0,
   "id" : "ettoday-62",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2da")
-}
+},
 
-/* 50 */
+
 {
   "title" : "凍抹條！鮮奶調漲　超商拿鐵貴5元",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -607,10 +557,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317745860000.0,
   "id" : "ettoday-63",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2db")
-}
+},
 
-/* 51 */
+
 {
   "title" : "縫製閱讀抱枕　集美樂齡阿嬤贈雙溪國小學童",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -619,10 +568,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317747600000.0,
   "id" : "ettoday-65",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2dc")
-}
+},
 
-/* 52 */
+
 {
   "title" : "探測外星人　智利沙漠將建世界最大天文望遠鏡",
   "img" : "http://static.ettoday.net/images/0/d78.jpg",
@@ -631,10 +579,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317746220000.0,
   "id" : "ettoday-66",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2dd")
-}
+},
 
-/* 53 */
+
 {
   "title" : "黑潮亂流，水溫偏高　台東旗魚捕獲少",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -643,10 +590,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317745800000.0,
   "id" : "ettoday-67",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2de")
-}
+},
 
-/* 54 */
+
 {
   "title" : "E彈主播柳岩爆乳半裸挨轟　反嗆：我很自豪",
   "img" : "http://static.ettoday.net/images/0/d92.jpg",
@@ -655,10 +601,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317748740000.0,
   "id" : "ettoday-68",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2df")
-}
+},
 
-/* 55 */
+
 {
   "title" : "見證60年夥伴關係　外交部將與台北市美國商會辦酒會",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -667,10 +612,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317747600000.0,
   "id" : "ettoday-69",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e0")
-}
+},
 
-/* 56 */
+
 {
   "title" : "MLB／手肘術後首度練投　松坂明年有望復出",
   "img" : "http://static.ettoday.net/images/0/d81.jpg",
@@ -679,10 +623,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317746820000.0,
   "id" : "ettoday-70",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e1")
-}
+},
 
-/* 57 */
+
 {
   "title" : "教育部推戀愛秘笈　網友諷出性愛秘笈也沒人看",
   "img" : "http://static.ettoday.net/images/0/d109.jpg",
@@ -691,10 +634,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317756720000.0,
   "id" : "ettoday-71",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e2")
-}
+},
 
-/* 58 */
+
 {
   "title" : "4紙盒加高供小妹坐　貴州機車超載雷翻路人",
   "img" : "http://static.ettoday.net/images/0/d95.jpg",
@@ -703,10 +645,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317750300000.0,
   "id" : "ettoday-72",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e3")
-}
+},
 
-/* 59 */
+
 {
   "title" : "MLB／紅襪教頭失意離隊　與建仔合作找新慰藉？",
   "img" : "http://static.ettoday.net/images/0/d83.jpg",
@@ -715,10 +656,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317747840000.0,
   "id" : "ettoday-73",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e4")
-}
+},
 
-/* 60 */
+
 {
   "title" : "笑他沒用　小男友勒斃女友伴屍3日",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -727,10 +667,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317747900000.0,
   "id" : "ettoday-74",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e5")
-}
+},
 
-/* 61 */
+
 {
   "title" : "打造「日光小林」　太陽能熱水系統",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -739,10 +678,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317756660000.0,
   "id" : "ettoday-75",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e6")
-}
+},
 
-/* 62 */
+
 {
   "title" : "【影】巴西民眾拍到疑似外星人乾屍！　3根手指2根腳指",
   "img" : "http://static.ettoday.net/images/0/d133.jpg",
@@ -751,10 +689,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317765180000.0,
   "id" : "ettoday-77",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e7")
-}
+},
 
-/* 63 */
+
 {
   "title" : "沖繩祭典恐怖「泥巴神」　抹得髒兮兮除厄運",
   "img" : "http://static.ettoday.net/images/0/d104.jpg",
@@ -763,10 +700,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317751500000.0,
   "id" : "ettoday-78",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e8")
-}
+},
 
-/* 64 */
+
 {
   "title" : "諾貝爾文學獎　80歲瑞典詩人Tomas獲得",
   "img" : "http://static.ettoday.net/images/0/d398.jpg",
@@ -775,10 +711,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317930660000.0,
   "id" : "ettoday-79",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2e9")
-}
+},
 
-/* 65 */
+
 {
   "title" : "驚人大改造　花花公子艷星變身肌肉女",
   "img" : "http://static.ettoday.net/images/0/d94.bmp",
@@ -787,10 +722,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317818100000.0,
   "id" : "ettoday-80",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ea")
-}
+},
 
-/* 66 */
+
 {
   "title" : "NBA封館　鄧肯沒在怕的　年紀不是問題",
   "img" : "http://static.ettoday.net/images/0/d93.jpg",
@@ -799,10 +733,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317750360000.0,
   "id" : "ettoday-81",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2eb")
-}
+},
 
-/* 67 */
+
 {
   "title" : "「不惹事不鬧事」 17歲幫主想出名　自組雷龍幫",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -811,10 +744,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317765300000.0,
   "id" : "ettoday-83",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ec")
-}
+},
 
-/* 68 */
+
 {
   "title" : "邵昕、婷婷為子不合？　兩人分居各自玩！",
   "img" : "http://static.ettoday.net/images/0/d96.jpg",
@@ -823,10 +755,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317807960000.0,
   "id" : "ettoday-84",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ed")
-}
+},
 
-/* 69 */
+
 {
   "title" : "耶穌被釘十字架也是為了外星人？",
   "img" : "http://static.ettoday.net/images/0/d108.jpg",
@@ -835,10 +766,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317817560000.0,
   "id" : "ettoday-85",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ee")
-}
+},
 
-/* 70 */
+
 {
   "title" : "輪胎被刺太氣　他再刺別人的洩憤",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -847,10 +777,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317749820000.0,
   "id" : "ettoday-86",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ef")
-}
+},
 
-/* 71 */
+
 {
   "title" : "摸了就跑！　男專挑國中女襲胸",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -859,10 +788,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317750660000.0,
   "id" : "ettoday-87",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f0")
-}
+},
 
-/* 72 */
+
 {
   "title" : "從酒店販毒進校園　女夜校生染黑同學",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -871,10 +799,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317750540000.0,
   "id" : "ettoday-88",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f1")
-}
+},
 
-/* 73 */
+
 {
   "title" : "真正的勇者才喜歡巨乳！日劇說出男人心聲",
   "img" : "http://static.ettoday.net/images/0/d150.jpg",
@@ -883,10 +810,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317771060000.0,
   "id" : "ettoday-89",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f2")
-}
+},
 
-/* 74 */
+
 {
   "title" : "六三三跳票馬英九不捐薪？　網友PO影片吐槽",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -895,10 +821,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317762840000.0,
   "id" : "ettoday-90",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f3")
-}
+},
 
-/* 75 */
+
 {
   "title" : "捷運非博愛座沒讓位　大嬸操國台英語咆哮狂罵",
   "img" : "http://static.ettoday.net/images/0/d149.jpg",
@@ -907,10 +832,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317770220000.0,
   "id" : "ettoday-92",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f4")
-}
+},
 
-/* 76 */
+
 {
   "title" : "MLB／老虎終結者無膽？　嗆完洋基又耍孬",
   "img" : "http://static.ettoday.net/images/0/d110.jpg",
@@ -919,10 +843,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317753840000.0,
   "id" : "ettoday-93",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f5")
-}
+},
 
-/* 77 */
+
 {
   "title" : "金馬獎入圍名單出爐　隋棠、侯怡君成遺珠",
   "img" : "http://static.ettoday.net/images/0/d131.jpg",
@@ -931,10 +854,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317761460000.0,
   "id" : "ettoday-94",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f6")
-}
+},
 
-/* 78 */
+
 {
   "title" : "盼iPhone5來iPhone4S　外觀沒變",
   "img" : "http://static.ettoday.net/images/0/d156.jpg",
@@ -943,10 +865,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317802560000.0,
   "id" : "ettoday-95",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f7")
-}
+},
 
-/* 79 */
+
 {
   "title" : "MLB／柏奈特扮洋基救世主　吉總力挺子弟兵",
   "img" : "http://static.ettoday.net/images/0/d115.jpg",
@@ -955,10 +876,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317754140000.0,
   "id" : "ettoday-96",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f8")
-}
+},
 
-/* 80 */
+
 {
   "title" : "抽iPhone5當噱頭？　業者稱絕不虎爛",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -967,10 +887,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317756060000.0,
   "id" : "ettoday-97",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2f9")
-}
+},
 
-/* 81 */
+
 {
   "title" : "「拷貝貓」有樣學樣　模仿主人一舉一動！",
   "img" : "http://static.ettoday.net/images/0/d128.jpg",
@@ -979,10 +898,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317760080000.0,
   "id" : "ettoday-98",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2fa")
-}
+},
 
-/* 82 */
+
 {
   "title" : "魏德聖窮困潦倒　媽媽塞錢援助",
   "img" : "http://static.ettoday.net/images/0/d121.png",
@@ -991,10 +909,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317769200000.0,
   "id" : "ettoday-99",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2fb")
-}
+},
 
-/* 83 */
+
 {
   "title" : "落實不動產實價課稅　財政部「五要」當法寶",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -1003,10 +920,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317758400000.0,
   "id" : "ettoday-100",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2fc")
-}
+},
 
-/* 84 */
+
 {
   "title" : "政務委員尹啟銘：633是八年政見　《自由》自打嘴巴",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -1015,10 +931,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317762840000.0,
   "id" : "ettoday-101",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2fd")
-}
+},
 
-/* 85 */
+
 {
   "title" : "吳敦義讚九把刀ㄅ一ㄤ\u02cbㄅ一ㄤ\u02cb叫？",
   "img" : "http://static.ettoday.net/images/0/d135.jpg",
@@ -1027,10 +942,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317765780000.0,
   "id" : "ettoday-103",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2fe")
-}
+},
 
-/* 86 */
+
 {
   "title" : "提前預購iPhone5？小心電腦病毒！",
   "img" : "http://static.ettoday.net/images/0/d127.jpg",
@@ -1039,10 +953,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317764040000.0,
   "id" : "ettoday-104",
-  "_id" : ObjectId("53842d4c7a7477e72c47a2ff")
-}
+},
 
-/* 87 */
+
 {
   "title" : "全球熱切期盼　傳iPhone 5將具聲控功能",
   "img" : "http://static.ettoday.net/images/0/d129.jpg",
@@ -1051,10 +964,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317762780000.0,
   "id" : "ettoday-105",
-  "_id" : ObjectId("53842d4c7a7477e72c47a300")
-}
+},
 
-/* 88 */
+
 {
   "title" : "彭于晏、陳妍希搶獎座　得戰3影帝3影后　",
   "img" : "http://static.ettoday.net/images/0/d137.jpg",
@@ -1063,10 +975,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317765960000.0,
   "id" : "ettoday-106",
-  "_id" : ObjectId("53842d4c7a7477e72c47a301")
-}
+},
 
-/* 89 */
+
 {
   "title" : "颱風放假是濫草莓？鯰魚哥反嗆：「有種來吹風」",
   "img" : "http://static.ettoday.net/images/0/d132.jpg",
@@ -1075,10 +986,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317763620000.0,
   "id" : "ettoday-107",
-  "_id" : ObjectId("53842d4c7a7477e72c47a302")
-}
+},
 
-/* 90 */
+
 {
   "title" : "星巴克含乳飲品漲10元　網友：統一變聰明了",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -1087,10 +997,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317768480000.0,
   "id" : "ettoday-109",
-  "_id" : ObjectId("53842d4c7a7477e72c47a303")
-}
+},
 
-/* 91 */
+
 {
   "title" : "《那些年》導演、男女主角全入圍　柴智屏預告百萬獎金",
   "img" : "http://static.ettoday.net/images/0/d144.jpg",
@@ -1099,10 +1008,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317769620000.0,
   "id" : "ettoday-110",
-  "_id" : ObjectId("53842d4c7a7477e72c47a304")
-}
+},
 
-/* 92 */
+
 {
   "title" : "「美艷女星」鍾麗緹素顏見男友人　擁腫憔悴性感不再",
   "img" : "http://static.ettoday.net/images/0/d125.jpg",
@@ -1111,10 +1019,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317764760000.0,
   "id" : "ettoday-112",
-  "_id" : ObjectId("53842d4c7a7477e72c47a305")
-}
+},
 
-/* 93 */
+
 {
   "title" : "國片超搶眼！《賽德克．巴萊》入圍金馬11獎項",
   "img" : "http://static.ettoday.net/images/0/d134.jpg",
@@ -1123,10 +1030,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317766620000.0,
   "id" : "ettoday-113",
-  "_id" : ObjectId("53842d4c7a7477e72c47a306")
-}
+},
 
-/* 94 */
+
 {
   "title" : "赴新疆請注意　打疫苗防小兒麻痺",
   "img" : "http://static.ettoday.net/images/0/d155.jpg",
@@ -1135,10 +1041,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317844560000.0,
   "id" : "ettoday-114",
-  "_id" : ObjectId("53842d4c7a7477e72c47a307")
-}
+},
 
-/* 95 */
+
 {
   "title" : "入圍金馬女主角　陳妍希喜極而泣",
   "img" : "http://static.ettoday.net/images/0/d138.jpg",
@@ -1147,10 +1052,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317767160000.0,
   "id" : "ettoday-115",
-  "_id" : ObjectId("53842d4c7a7477e72c47a308")
-}
+},
 
-/* 96 */
+
 {
   "title" : "超惡劣駕駛　不滿被叭　竟以花盆砸後車並倒車衝撞　",
   "img" : "http://static.ettoday.net/images/0/d153.jpg",
@@ -1159,10 +1063,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317778680000.0,
   "id" : "ettoday-116",
-  "_id" : ObjectId("53842d4c7a7477e72c47a309")
-}
+},
 
-/* 97 */
+
 {
   "title" : "器捐案柯文哲自比袁崇煥　批衛署未審先判",
   "img" : "http://cache.ettoday.net/images/share-photo.jpg",
@@ -1171,10 +1074,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317777360000.0,
   "id" : "ettoday-117",
-  "_id" : ObjectId("53842d4c7a7477e72c47a30a")
-}
+},
 
-/* 98 */
+
 {
   "title" : "背負國片復興使命　彭于晏獨挑金馬最佳男主角大樑",
   "img" : "http://static.ettoday.net/images/0/d147.jpg",
@@ -1183,10 +1085,9 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317809580000.0,
   "id" : "ettoday-118",
-  "_id" : ObjectId("53842d4c7a7477e72c47a30b")
-}
+},
 
-/* 99 */
+
 {
   "title" : "生命起源可望破解　耗資390億天文望遠鏡揭密",
   "img" : "http://static.ettoday.net/images/0/d148.jpg",
@@ -1195,5 +1096,5 @@
   "author" : "ETtoday 新聞雲",
   "time" : 1317770640000.0,
   "id" : "ettoday-119",
-  "_id" : ObjectId("53842d4c7a7477e72c47a30c")
 }
+]
