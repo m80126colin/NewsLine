@@ -17,17 +17,9 @@ $(document).ready(function() {
 	$.getJSON('data.json', '', function (data) {
 		for (var i = 0; i < data.length; i++) {
 			var time		= new Date(data[i].time);
-			var time_str	= [
-				time.getFullYear(),
-				time.getMonth() + 1,
-				time.getDate(),
-				time.getHours(),
-				time.getMinutes(),
-				time.getSeconds()
-				].join(',');
 			result.timeline.date.push({
-				'startDate':	time_str,
-				'endDate':		time_str,
+				'startDate':	time,
+				'endDate':		time,
 				'headline':		data[i].title,
 				'text':			'haha',
 				'asset': {
