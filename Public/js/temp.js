@@ -15,10 +15,6 @@ $(document).ready(function() {
 		}
 	};
 	$.getJSON('data2.json', '', function (data) {
-		console.log('ACK!');
-		$.each(data, function (key, val) {
-			console.log(key, val);
-		});
 		for (var i = 0; i < data.length; i++) {
 			var time		= new Date(data[i].date);
 			var time_str	= [
@@ -39,6 +35,7 @@ $(document).ready(function() {
 				}
 			});
 		}
+		console.log(result);
 		createStoryJS({
 			type:		'timeline',
 			width:		'100%',
