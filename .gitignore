@@ -2,6 +2,7 @@
 *.ini
 *.json
 *.zip
+Thumbs.db
 mongod.lock
 journal/
 node_modules/
