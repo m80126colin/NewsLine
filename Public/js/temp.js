@@ -15,6 +15,9 @@ $(document).ready(function() {
 		}
 	};
 	$.getJSON('data.json', function (data) {
+		$.each(data, function (key, val) {
+			console.log(key, val);
+		});
 		for (var i = 0; i < data.length; i++) {
 			var time		= new Date(data[i].date);
 			var time_str	= [
