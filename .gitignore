@@ -1,6 +1,7 @@
 *~
 *.ini
 *.json
+!package.json
 *.zip
 Thumbs.db
 mongod.lock
