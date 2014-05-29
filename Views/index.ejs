@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content ="text/html"; charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= title %></title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="/Public/css/bootstrap.min.css">
+</head>
+<body>
+	<ul id="topic">
+		<% for (var i = 0; i < topic.length; i++) { %>
+			<p><span class="label label-default">
+				<a href="newsline/<%= topic[i].tag %>"><%= topic[i].tag %></a>
+			</span></p>
+		<% } %>
+	</ul>
+	<% include footer %>
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
+	<!-- jQuery UI -->
+	<script type="text/javascript" src="/Public/js/jquery-ui.min.js">
+	</script>
+</body>
+</html>
