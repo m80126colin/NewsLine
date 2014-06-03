@@ -20,7 +20,7 @@
 	</header>
 	<!-- timeline -->
 	<div id="timeline"></div>
-	<footer>@ CCSP Final Project By NewsLine.</footer>
+	<% include footer %>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<!-- jQuery UI -->
@@ -30,36 +30,13 @@
 	<!-- timelineJS -->
 	<script src="/Public/js/timeline.js"></script>
 	<script src="http://visjs.org/dist/vis.js"></script>
+	<script src="/Public/js/algo.js"></script>
 	<!-- self JS -->
 	<script type="text/javascript">
 		$(document).ready(function() {
 			// process timeline format
 			var tag = '<%= tag %>';
-			$.get('/data/' + tag, '', function (data) {
-				var container = document.getElementById('timeline');
-				var groups = new vis.DataSet([
-						{id: 1, content: tag}
-					]);
-				var items = [];
-				for (var i = 0; i < data.length; i++) {
-					items[i] = {
-						id: i,
-						group: 1,
-						start: new Date(data[i].time),
-						content: data[i].title
-					};
-				}
-				var options = {
-					type: 'point',
-					max: '2019-12-31',
-					min: '1989-01-01',
-					zoomMax: 315360000000,
-					zoomMin: 10000
-				};
-				var timeline = new vis.Timeline(container, null, options);
-				timeline.setGroups(groups);
-				timeline.setItems(items);
-			});
+			setTimeLine(tag, 'timeline');
 		});
 	</script>
 </body>
