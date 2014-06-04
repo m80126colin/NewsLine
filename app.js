@@ -64,70 +64,7 @@ app.post('/vote', function(req, res, next){
 // TODO [FB]: Facebook callback handler
 // Ref: https://github.com/jaredhanson/passport-facebook/blob/master/examples/login/app.js#L100
 //
-app.get('/fbcb', passport.authenticate('facebook', {
-  successRedirect:'/result',
-  failureRedirect: '/'
-}));
 
-app.get('/result', function(req, res){
-
-  var vote = req.session.vote, // The voted item (0~6)
-      //fbid = "" + Math.random();    // Facebook ID. (Fake)
-      fbid = req.user && req.user.id; // TODO [FB]: Get user from req.user
-
-  // Delete the stored session.
-  //
-  delete req.session.vote;
-  req.logout(); // Delete req.user
-
-  // Redirect the malicious (not voted or not logged in) requests.
-  //
-  if( vote === undefined || fbid === undefined ){
-    req.flash('info', "請先在此處投票。");
-    return res.redirect('/');
-  }
-
-  /*
-    TODO [DB] : Replace the mock results with real ones.
-    Please record the user vote into database.
-    If the user already exists in the database, redirect her/him to '/'
-  */
-
-  //
-  var vote = new Vote({vote: vote, fbid: fbid});
-  vote.save(function(err, newVote){
-    if( err ){
-      req.flash('info', "你已經投過票囉！");
-      return res.redirect('/');
-    }
-    
-    // calculate results
-    var testV = Vote.aggregate({
-    	$group : {
-    		_id : "$vote",
-    		total : { $sum : 1 },
-    		voters : { $push : "$fbid" }
-    	}
-    }, function(err, result) { 
-    	var votes = [0,0,0,0,0,0,0];
-    	var vote_sum=0;
-    	//console.log(result);
-    	for (var i=0; i<result.length; i++) {
-    		votes[result[i]._id] = result[i].total;
-    		vote_sum += result[i].total;
-    	}
-    	for (var i=0; i<votes.length; i++) {
-    		votes[i] = votes[i]/vote_sum*100;
-    	}
-    	//console.log(votes);
-    	res.render('result', {
-    		votes: votes
-    		//votes: [18.1, 12.5, 42.44445, 21.3, 1.3, 2.5, 1.85555] // Percentages
-    	});
-    });
-  });
-
-});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
