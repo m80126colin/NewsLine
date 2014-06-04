@@ -47,25 +47,6 @@ app.get('/', function(req, res){
   res.render('index', {messages: messages});
 });
 
-/* Stores vote option in session and invokes facebook authentication */
-app.post('/vote', function(req, res, next){
-  // Stores the voted option (conveted to number) into session
-  req.session.vote = +req.body.vote;
-
-  res.redirect('/result');
-
-  /* TODO [FB] : Redirect to passport auth url! */
-  // Directly invoke the passport authenticate middleware.
-  // Ref: http://passportjs.org/guide/authenticate/
-  //
-  passport.authenticate('facebook')(req, res, next);
-});
-
-// TODO [FB]: Facebook callback handler
-// Ref: https://github.com/jaredhanson/passport-facebook/blob/master/examples/login/app.js#L100
-//
-
-
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
