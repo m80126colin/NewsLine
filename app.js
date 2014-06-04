@@ -18,18 +18,45 @@ app.use(express.methodOverride());
 // app.use(express.cookieParser(process.env.COOKIE_SECRET));
 // app.use(express.session());
 app.use(express.bodyParser());
-// public source
+
+/*
+ *
+ *	public source
+ *
+ */
 app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
 app.use('/public/d3', express.static(package_dir + '/d3'));
 app.use('/public/vis', express.static(package_dir + '/vis/dist'));
 app.use('/public/custom', express.static(public_dir + '/custom'));
-// pages
+
+/*
+ *
+ *	pages
+ *
+ */
 app.get('/', controllers.renderIndex);
 app.get('/newsline/:tag', controllers.renderTimeLine);
-// apis
+// app.get('/about', controllers.renderAbout);
+// app.get('/about', controllers.renderHelp);
+
+/*
+ *
+ *	apis
+ *
+ */
 app.get('/api/tags', controllers.getTags);
 app.get('/api/newsline/:tag', controllers.getNewsByTag);
-// admin
+
+/*
+ *
+ *	admin
+ *
+ */
 // app.get('/admin', controllers.renderAdmin);
-// listen
+
+/*
+ *
+ *	listen
+ *
+ */
 app.listen(port);

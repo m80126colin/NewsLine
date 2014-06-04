@@ -1,0 +1,26 @@
+div.main {
+	margin-top: 25px;
+}
+
+img.logo {
+	width: 470px;
+	height: 290px;
+	margin-left: -235px;
+	margin-top: 15px;
+	opacity: 0.9;
+}
+
+/*
+nav.form {
+	border-radius: 15px;
+	margin-left: -155px;
+	margin-top: 50px;
+	width: 360px;
+}
+*/
+
+
+form.search input {
+	width: 80%;
+	margin-left: -20px;
+}

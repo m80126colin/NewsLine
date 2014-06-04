@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-Type" content ="text/html"; charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><%= title %></title>
-	<link rel="stylesheet" href="/public/custom/css/style.css">
 	<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/public/vis/vis.min.css">
 	<link rel="stylesheet" href="/public/custom/css/newsline.css">
@@ -12,16 +11,16 @@
 <body>
 	<div class="container">
 		<% include header %>
-		<div class="row">
+		<div class="row info">
 			<div class="col-md-6">
-				<div class="jumbotron" style="border-radius:6px;padding-top:0px;padding-bottom:5px">
+				<div class="jumbotron">
 					<h1>insert name!</h1>
-					<p class="" style="margin-bottom:5px"><strong>第一次出現時間 :  </strong><strong id="firsttime">insert time here</strong></p>
-					<p class="" style="margin-bottom:5px"><strong>總篇數 :  </strong><strong id="total">insert total amount</strong></p>
-					<p class="" style="margin-bottom:5px"><strong>Tag數量前3名 : </strong></p>
-					<p class="" style="margin-bottom:5px"><strong>1. </strong><strong id="tag1">insert tag1 here</strong></p>
-					<p class="" style="margin-bottom:5px"><strong>2. </strong><strong id="tag2">insert tag2 here</strong></p>
-					<p class="" style="margin-bottom:5px"><strong>3. </strong><strong id="tag3">insert tag3 here</strong></p>
+					<p>第一次出現時間: <span id="firsttime">insert time here</span></p>
+					<p>總篇數: <span id="total">insert total amount</span></p>
+					<p>Tag數量前3名:</p>
+					<p>1. <span id="tag1">insert tag1 here</span></p>
+					<p>2. <span id="tag1">insert tag2 here</span></p>
+					<p>3. <span id="tag1">insert tag3 here</span></p>
 				</div>
 			</div>
 			<!-- column for pop up -->

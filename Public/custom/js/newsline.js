@@ -1,4 +1,3 @@
-
 var tagSelectAlgo = function(data) {
 	var tags = {};
 	var res = [];
@@ -81,7 +80,7 @@ var setTimeLine = function(tag, id) {
 		else mxDate = new Date(yr, mon + 6);
 		var options = {
 			showCurrentTime: true,
-			height: '150px',
+			height: '120px',
 			stack: false,
 			max: mxDate,
 			min: mnDate,

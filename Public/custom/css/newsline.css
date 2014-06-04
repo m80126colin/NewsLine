@@ -1,0 +1,12 @@
+.info div.jumbotron {
+	border-radius: 6px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+}
+.info div.jumbotron p, {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.info div.jumbotron p>* {
+	font-weight: bold;
+}
