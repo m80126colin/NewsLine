@@ -1,10 +1,10 @@
-var express		= require('express'),
-	path		= require('path'),
-	controllers	= require('./Controllers'),
-	public_dir	= __dirname + '/Public',
-	package_dir	= __dirname + '/node_modules',
-	port		= 5000,
-	app			= express();
+var express		= require('express');
+var path		= require('path');
+var controllers	= require('./Controllers');
+var public_dir	= __dirname + '/Public';
+var package_dir	= __dirname + '/node_modules';
+var port		= 5000;
+var app			= express();
 
 // all environments
 app.set('port', process.env.PORT || port);
