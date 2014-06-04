@@ -5,7 +5,7 @@ $(function(){
 	var color= d3.scale.category10();
 	
 	var canvas=d3.select('#bubble').append('svg')
-				.attr('width',width)
+				.attr('width',850)
 				.attr('height',600)
 				.style('margin-left','20px');
 	
@@ -53,9 +53,6 @@ $(function(){
 			.attr("stroke-width","0")
 			.style('cursor','pointer')
 			.on("click", function(d){return d.children? console.log('base') : window.open("http://google.com.tw","_self");});
-			//.on("mouseover", function(){return tooltip.style("visibility", "visible");})
-			//.on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
-			//.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 			
 			
 		node.append("text")
