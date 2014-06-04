@@ -1,7 +1,7 @@
 var express		= require('express'),
 	controllers	= require('./Controllers'),
 	public_dir	= __dirname + '/Public',
-	package_dir	= __dirname + '/node_modules'
+	package_dir	= __dirname + '/node_modules',
 	host		= '127.0.0.1',
 	port		= 5000;
 
