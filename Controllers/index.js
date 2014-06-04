@@ -2,7 +2,7 @@ var db = require('../Models');
 
 module.exports.renderIndex = function(req, res) {
 	var args	= {
-		'title':	'NewsLine'
+		'title':	'NewsLine!'
 	};
 	res.render('index', args);
 }
