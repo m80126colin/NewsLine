@@ -27,5 +27,7 @@ app.use('/public/custom', express.static(public_dir + '/custom'));
 app.get('/', controllers.renderIndex);
 app.get('/newsline/:tag', controllers.renderTimeLine);
 // apis
-app.get('/api/newsline/:tag', controllers.getNewsByTag);
 app.get('/api/tags', controllers.getTags);
+app.get('/api/newsline/:tag', controllers.getNewsByTag);
+// admin
+app.get('/admin', controllers.renderAdmin);
