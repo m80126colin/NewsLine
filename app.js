@@ -48,6 +48,7 @@ app.get('/', controllers.renderIndex);
 //  var messages = req.flash('info');
 //  res.render('index', {messages: messages});
 //});
+app.get('/api/tags', controllers.getTags);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
