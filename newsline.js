@@ -2,11 +2,20 @@ var express		= require('express'),
 	controllers	= require('./Controllers'),
 	public_dir	= __dirname + '/Public',
 	package_dir	= __dirname + '/node_modules',
-	host		= '127.0.0.1',
 	port		= 5000;
 
 express()
+// all environments
+.set('port', process.env.PORT || port)
+.set('views', path.join(__dirname, 'views'))
 .set('view engine', 'ejs')
+.use(express.favicon())
+.use(express.logger('dev'))
+.use(express.json())
+.use(express.urlencoded())
+.use(express.methodOverride())
+.use(express.cookieParser(process.env.COOKIE_SECRET))
+.use(express.session())
 .use(express.bodyParser())
 // public source
 .use('/public/bootstrap', express.static(public_dir + '/bootstrap'))
@@ -18,5 +27,4 @@ express()
 .get('/newsline/:tag', controllers.renderTimeLine)
 // apis
 .get('/api/newsline/:tag', controllers.getNewsByTag)
-.get('/api/tags', controllers.getTags)
-.listen(port, host);
+.get('/api/tags', controllers.getTags);
