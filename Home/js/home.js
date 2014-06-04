@@ -2,16 +2,18 @@ $(function(){
 	
 	var width=647,
 		height=625;
-	var color= d3.scale.category20c();
+	var color= d3.scale.category10();
 	
 	var canvas=d3.select('#bubble').append('svg')
 				.attr('width',width)
-				.attr('height',500)
+				.attr('height',600)
+				.style('margin-left','20px');
 	
 	var tooltip = d3.select("body")
 				.append("div")
 				.attr('class','fuck')
 				.style("position", "absolute")
+				.style('height','0px')
 				.style("z-index", "10")
 				.style("visibility", "hidden")
 				.text("a simple tooltip");
@@ -48,7 +50,7 @@ $(function(){
 			.attr("fill",function(d){return d.children? "#fff" : color(d.className); })
 			.attr("opacity",0.55)
 			.attr("stroke", function(d){ return d.children? "#fff" : "#ADADAD"; })
-			.attr("stroke-width","1")
+			.attr("stroke-width","0")
 			.style('cursor','pointer')
 			.on("click", function(d){return d.children? console.log('base') : window.open("http://google.com.tw","_self");});
 			//.on("mouseover", function(){return tooltip.style("visibility", "visible");})
@@ -60,7 +62,8 @@ $(function(){
 			.attr("dy", ".3em")
 			.style("text-anchor", "middle")
 			.style('cursor','pointer')
-			.style('font', function(d){ var str=d.className+"";var len=6-(str.length);return (d.r*len/6)+"px sans-serif" ;})
+			.style('font', function(d){ var str=d.className+"";var len=6-(str.length);return (d.r*len/6)+"px 微軟雅黑體,Microsoft YaHei,微軟正黑體,Microsoft JhengHei,Comic Sans MS,sans-serif" ;})
+			.style('font-weight',function(d){var str=d.className+"";var len=6-(str.length); return (d.r*len/6)<=40? "bold" : "normal"; })
 			.text(function(d){ return d.children ? "" : d.className; })
 			.on("click", function(d){d.children? console.log('base') : window.open("http://google.com.tw","_self");});
 		
@@ -72,13 +75,27 @@ $(function(){
 	var hover=setTimeout(function(){
 		$('.node').hover(
 			function(){
-				$(this).find('circle').attr('opacity',0.7);
+				var $circle=$(this).find('circle');
+				var r=parseFloat($circle.attr('r'));
+				$circle.attr('r',r*1.1);
+				$circle.attr('opacity',0.8);
+				var $text=$(this).find('text');
+				var s=parseFloat($text.css('font-size'));
+				//alert(s);
+				$text.css('font-size',s*1.1*1.1);
 			},
 			function(){
-				$(this).find('circle').attr('opacity',0.55);
+				var $circle=$(this).find('circle');
+				var r=parseFloat($circle.attr('r'));
+				$circle.attr('r',r/1.1);
+				$circle.attr('opacity',0.55);
+				var $text=$(this).find('text');
+				var s=parseFloat($text.css('font-size'));
+				$text.css('font-size',s);
 			}
 		);
 	},200);
+	
 	
 	
 	
