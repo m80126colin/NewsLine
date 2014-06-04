@@ -36,7 +36,7 @@ app.use(flash());
 app.use(app.router);
 //app.use(express.static(path.join(__dirname, 'public')));
 // public source
-app.use('/public/bootstrap', express.static(path.join(public_dir + '/bootstrap')));
+app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
 app.use('/public/d3', express.static(path.join(package_dir + '/d3')));
 app.use('/public/vis', express.static(path.join(package_dir + '/vis/dist')));
 app.use('/public/custom', express.static(path.join(public_dir + '/custom')));
