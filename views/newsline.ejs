@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content ="text/html"; charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/public/custom/css/style.css">
+	<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/vis/vis.min.css">
+	<link rel="stylesheet" href="/public/custom/css/newsline.css">
+</head>
+<body>
+	<header>
+		<!--render after linking data-->
+		<div id="tag-topic">Tag Topic</div>
+	</header>
+	<!-- timeline -->
+	<div id="timeline"></div>
+	<% include footer %>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/public/custom/js/jquery-ui.min.js"></script>
+	<script src="/public/vis/vis.min.js"></script>
+	<script src="/public/custom/js/algo.js"></script>
+	<!-- self JS -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// process timeline format
+			var tag = '<%= tag %>';
+			setTimeLine(tag, 'timeline');
+		});
+	</script>
+</body>
+</html>

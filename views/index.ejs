@@ -1,60 +1,44 @@
-<% include _header.ejs %>
-<form class="poll-form" method="post" action="/vote">
-
-  <% if (messages.length) { %>
-    <p class="form-instruction flash-message">
-      <%- messages.join('<br>') %>
-    </p>
-  <% } %>
-
-  <p class="form-instruction">
-    請在下面點選你的意見
-  </p>
-
-  <!-- A special "flattened" list structure for the CSS styling to work  -->
-  <div class="poll-list">
-
-    <input type="radio" id="poll-option-0" name="vote" value="0">
-    <label for="poll-option-0">
-      <span><img src="images/fuck.png" alt="幹！">不服</span>
-    </label>
-
-    <input type="radio" id="poll-option-1" name="vote" value="1">
-    <label for="poll-option-1">
-      <span>不胡啦</span>
-    </label>
-
-    <input type="radio" id="poll-option-2" name="vote" value="2">
-    <label for="poll-option-2">
-      <span>不太服</span>
-    </label>
-
-    <input type="radio" id="poll-option-3" name="vote" value="3" checked>
-    <label for="poll-option-3">
-      <span>沒感覺</span>
-    </label>
-
-    <input type="radio" id="poll-option-4" name="vote" value="4">
-    <label for="poll-option-4">
-      <span>有點服</span>
-    </label>
-
-    <input type="radio" id="poll-option-5" name="vote" value="5">
-    <label for="poll-option-5">
-      <span>蠻酥胡</span>
-    </label>
-
-    <input type="radio" id="poll-option-6" name="vote" value="6">
-    <label for="poll-option-6">
-      <span>超服<img src="images/der.png" alt="der <3"></span>
-    </label>
-
-  </div>
-
-  <p class="form-instruction">
-    <button type="submit" class="form-submit">
-      送出意見看統計
-    </button>
-  </p>
-</form>
-<% include _footer.ejs %>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+	<title>NewsLine!</title>
+	<script src="/public/d3/d3.min.js"></script>
+	<link href="/public/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12"></div>
+			<div class="col-md-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" id="bubble"></div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<nav class="navbar navbar-default" style="border-radius: 15px;" role="navigation">
+					<div class="container-fluid" style="padding-right: 0px;">
+					<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header"></div>
+						
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" style="width: 258px;margin-left: -20px;" placeholder="搜尋其他關鍵字"></input>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+							</div>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+			</div><!-- /.container-fluid -->
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/public/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/public/custom/js/home.js"></script>
+</body>
