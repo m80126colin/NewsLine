@@ -1,5 +1,6 @@
 *~
 *.ini
 *.zip
+*.log
 Thumbs.db
 node_modules/

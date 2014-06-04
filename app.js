@@ -1,4 +1,5 @@
 var express		= require('express'),
+	path		= require('path'),
 	controllers	= require('./Controllers'),
 	public_dir	= __dirname + '/Public',
 	package_dir	= __dirname + '/node_modules',
@@ -18,7 +19,7 @@ app.use(express.cookieParser(process.env.COOKIE_SECRET));
 app.use(express.session());
 app.use(express.bodyParser());
 // public source
-app.use('/public/bootstrap', express.static(public_dir + '/bootstrap';))
+app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
 app.use('/public/d3', express.static(package_dir + '/d3'));
 app.use('/public/vis', express.static(package_dir + '/vis/dist'));
 app.use('/public/custom', express.static(public_dir + '/custom'));
