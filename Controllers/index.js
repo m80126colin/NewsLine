@@ -4,7 +4,7 @@ module.exports.renderIndex = function(req, res) {
 	var args	= {
 		'title':	'NewsLine'
 	};
-	res.render('index', args);
+	res.render('index1', args);
 }
 
 module.exports.renderTimeLine = function(req, res) {

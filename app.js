@@ -12,6 +12,7 @@ var passport = require('passport');
 
 require('./config/db'); // TODO [DB] : Connect to database
 require('./config/passport'); // TODO [FB] : Passport configuration
+var controllers	= require('./Controllers');
 
 var app = express();
 var Vote = mongoose.model('Vote'); // TODO [DB] : Get Vote model
@@ -42,10 +43,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', function(req, res){
-  var messages = req.flash('info');
-  res.render('index', {messages: messages});
-});
+app.get('/', controllers.renderIndex);
+//app.get('/', function(req, res){
+//  var messages = req.flash('info');
+//  res.render('index', {messages: messages});
+//});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
