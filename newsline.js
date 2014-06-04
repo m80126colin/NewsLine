@@ -1,6 +1,7 @@
 var express		= require('express'),
 	controllers	= require('./Controllers'),
 	public_dir	= __dirname + '/Public',
+	package_dir	= __dirname + '/node_modules'
 	host		= '127.0.0.1',
 	port		= 5000;
 
@@ -10,7 +11,7 @@ express()
 // public source
 .use('/public/bootstrap', express.static(public_dir + '/bootstrap'))
 .use('/public/d3', express.static(public_dir + '/d3'))
-.use('/public/vis', express.static(public_dir + '/vis/dist'))
+.use('/public/vis', express.static(package_dir + '/vis/dist'))
 .use('/public/custom', express.static(public_dir + '/custom'))
 // pages
 .get('/', controllers.renderIndex)

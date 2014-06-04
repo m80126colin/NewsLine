@@ -5,7 +5,8 @@
 	"dependencies": {
 		"express":	"3.2.5",
 		"mongodb":	"1.4.3",
-		"ejs":		"1.0.0"
+		"ejs":		"1.0.0",
+		"vis":		"1.0.2"
 	},
 	"engines": {
 		"node": "0.10.26"
