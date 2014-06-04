@@ -2,24 +2,11 @@
 <meta charset="utf-8">
 <head>
 	<title><%= title %></title>
-	<script src="/public/d3/d3.min.js"></script>
 	<link href="/public/bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="header" style="border-bottom: 1px solid #e5e5e5">
-					<ul class="nav nav-pills pull-right">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">About</a></li>
-					  <li><a href="#">Help?</a></li>
-					  <li><a href="#">Contact</a></li>
-					</ul>
-					<h3 class="text-muted" style="padding-bottom:0px;font-size:40px">NewsLine <small><em>/&nbsp Line your news</em></small></h3>
-				</div>
-			</div>
-		</div>
+		<% include header %>
 		<div class="row" style="margin-top:25px">
 			
 			<div class="col-md-9" id="bubble"></div>
@@ -46,8 +33,10 @@
 			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
 		</div>
+		<% include footer %>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="/public/d3/d3.min.js"></script>
 	<script src="/public/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/public/custom/js/home.js"></script>
+	<script src="/public/custom/js/index.js"></script>
 </body>

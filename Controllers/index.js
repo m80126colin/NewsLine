@@ -10,7 +10,7 @@ module.exports.renderIndex = function(req, res) {
 module.exports.renderTimeLine = function(req, res) {
 	var tag		= req.param('tag'),
 		args	= {
-			'title':	tag + ' - NewsLine',
+			'title':	tag + ' - NewsLine!',
 			'tag':		tag
 		};
 	res.render('newsline', args);

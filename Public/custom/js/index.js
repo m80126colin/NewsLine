@@ -1,5 +1,4 @@
 $(function(){
-	
 	var width=647,
 		height=625;
 	var color= d3.scale.category10();

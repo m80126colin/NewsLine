@@ -10,58 +10,36 @@
 	<link rel="stylesheet" href="/public/custom/css/newsline.css">
 </head>
 <body>
-	<header>
-		<!--render after linking data-->
-		<div id="tag-topic">Tag Topic</div>
-	</header>
-		<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-10">
-			<div class="header" style="border-bottom: 1px solid #e5e5e5">
-				<ul class="nav nav-pills pull-right">
-				  <li><a href="#">Home</a></li>
-				  <li><a href="#">About</a></li>
-				  <li><a href="#">Help?</a></li>
-				  <li><a href="#">Contact</a></li>
-				</ul>
-				<h3 class="text-muted" style="padding-bottom:0px;font-size:40px">NewsLine <small><em>/&nbsp Line your news</em></small></h3>
-			</div>
-		</div>
-		<div class="col-md-1"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-1"></div>
-		<div class="col-md-5">
-			<div class="jumbotron" style="border-radius:6px;padding-top:0px;padding-bottom:5px">
-				<h1>insert name!</h1>
-				<p class="" style="margin-bottom:5px"><strong>第一次出現時間 :  </strong><strong id="firsttime">insert time here</strong></p>
-				<p class="" style="margin-bottom:5px"><strong>總篇數 :  </strong><strong id="total">insert total amount</strong></p>
-				<p class="" style="margin-bottom:5px"><strong>Tag數量前3名 : </strong></p>
-				<p class="" style="margin-bottom:5px"><strong>1. </strong><strong id="tag1">insert tag1 here</strong></p>
-				<p class="" style="margin-bottom:5px"><strong>2. </strong><strong id="tag2">insert tag2 here</strong></p>
-				<p class="" style="margin-bottom:5px"><strong>3. </strong><strong id="tag3">insert tag3 here</strong></p>
-			</div>
-			
-		</div>
-		<!-- column for pop up -->
-		<div class="col-md-5" id="popup"></div>
-		<!-- end pop up -->
-		<div class="col-md-1"></div>
-	<div>
 	<div class="container">
+		<% include header %>
 		<div class="row">
-			<!-- column here for timeline -->
-			<div class="col-md-12" id="col_timeline"></div>
-			<!-- end timeline column -->
+			<div class="col-md-6">
+				<div class="jumbotron" style="border-radius:6px;padding-top:0px;padding-bottom:5px">
+					<h1>insert name!</h1>
+					<p class="" style="margin-bottom:5px"><strong>第一次出現時間 :  </strong><strong id="firsttime">insert time here</strong></p>
+					<p class="" style="margin-bottom:5px"><strong>總篇數 :  </strong><strong id="total">insert total amount</strong></p>
+					<p class="" style="margin-bottom:5px"><strong>Tag數量前3名 : </strong></p>
+					<p class="" style="margin-bottom:5px"><strong>1. </strong><strong id="tag1">insert tag1 here</strong></p>
+					<p class="" style="margin-bottom:5px"><strong>2. </strong><strong id="tag2">insert tag2 here</strong></p>
+					<p class="" style="margin-bottom:5px"><strong>3. </strong><strong id="tag3">insert tag3 here</strong></p>
+				</div>
+			</div>
+			<!-- column for pop up -->
+			<div class="col-md-6" id="popup"></div>
+		<div>
+		<div class="container">
+			<div class="row">
+				<!-- column here for timeline -->
+				<div class="col-md-12" id="timeline"></div>
+				<!-- end timeline column -->
+			</div>
 		</div>
+		<% include footer %>
 	</div>
-	<!-- timeline -->
-	<div id="timeline"></div>
-	<% include footer %>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/public/custom/js/jquery-ui.min.js"></script>
 	<script src="/public/vis/vis.min.js"></script>
-	<script src="/public/custom/js/algo.js"></script>
+	<script src="/public/custom/js/newsline.js"></script>
 	<!-- self JS -->
 	<script type="text/javascript">
 		$(document).ready(function() {

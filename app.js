@@ -12,11 +12,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.json());
+// app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser(process.env.COOKIE_SECRET));
-app.use(express.session());
+// app.use(express.cookieParser(process.env.COOKIE_SECRET));
+// app.use(express.session());
 app.use(express.bodyParser());
 // public source
 app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
@@ -30,4 +30,6 @@ app.get('/newsline/:tag', controllers.renderTimeLine);
 app.get('/api/tags', controllers.getTags);
 app.get('/api/newsline/:tag', controllers.getNewsByTag);
 // admin
-app.get('/admin', controllers.renderAdmin);
+// app.get('/admin', controllers.renderAdmin);
+// listen
+app.listen(port);
