@@ -1,5 +1,5 @@
 {
-  "name": "ccsp-hw5",
+  "name": "NewsLine-hw5",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,10 @@
     "express": "3.4.8",
     "ejs": "*",
     "mongoose": "*",
+    "mongodb": "*",
+	"ejs": "*",
+	"vis": "*",
+	"d3": "*",
     "connect-flash": "*",
     "passport": "*",
     "passport-facebook": "*"
