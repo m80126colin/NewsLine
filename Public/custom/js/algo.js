@@ -16,7 +16,11 @@ var tagSelectAlgo = function(data) {
 		res.push(tags[tag]);
 	}
 	res.sort(function (L, R) { return -(L.count - R.count); });
-	return res.slice(0, 10);
+	var sel = [];
+	for (var i = 0; i < res.length; i++)
+		if (res[i].count > 1)
+			sel.push(res[i]);
+	return sel.slice(0, 10);
 }
 
 var makeNews = function(data) {
@@ -56,7 +60,7 @@ var setTimeLine = function(tag, id) {
 		]);
 		var items = new vis.DataSet();
 		items.add(makeNews(data));
-		items.add(makeEvents(tagSelectAlgo(data)));
+		// items.add(makeEvents(tagSelectAlgo(data)));
 		var mnDate, mxDate, yr, mon;
 		for (var i = 0; i < data.length; i++) {
 			if (i) {

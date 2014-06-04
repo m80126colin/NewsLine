@@ -27,7 +27,7 @@ module.exports.getNewsByTag = function(req, res) {
 module.exports.getTags = function(req, res) {
 	db.getTags('tag_list', function (data) {
 		for (var i in data) {
-			data[i].weight = Math.floor(data[i].weight / 100000000) - 20000;
+			data[i].weight = Math.floor(data[i].weight / 100000000) - 19000;
 		}
 		res.json(data);
 	});
