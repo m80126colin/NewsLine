@@ -1,1 +1,1 @@
-web: node newsline.js
+web: node app.js

@@ -12,6 +12,6 @@
 		"cheerio": "0.15.0"
 	},
 	"scripts": {
-		"start": "node newsline.js"
+		"start": "node app.js"
 	}
 }
