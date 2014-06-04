@@ -2,7 +2,7 @@ var mongoClient	= require('mongodb').MongoClient,
 	format		= require('util').format;
 var url = 'mongodb://news_line:mycourseccspfinalproject1@ds057548.mongolab.com:57548/news_line';
 
-module.exports.readTags = function(col, callback) {
+module.exports.getTags = function(col, callback) {
 	mongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		db.collection(col)
@@ -18,11 +18,12 @@ module.exports.readTags = function(col, callback) {
 }
 
 // find tag
-module.exports.readByTag = function(tag, col, callback) {
+module.exports.getNewsByTag = function(tag, col, callback) {
 	mongoClient.connect(url, function (err, db) {
 		if (err) throw err;
 		db.collection(col)
 		.find({ 'tags': tag })
+		.limit(300)
 		.toArray(function (err, data) {
 			console.log(err);
 			callback(data);

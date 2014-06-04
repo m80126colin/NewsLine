@@ -1,13 +1,21 @@
-var express = require('express');
-var controllers = require('./Controllers');
-var host = '127.0.0.1';
-var port = 5000;
+var express		= require('express'),
+	controllers	= require('./Controllers'),
+	public_dir	= __dirname + '/Public',
+	host		= '127.0.0.1',
+	port		= 5000;
 
 express()
 .set('view engine', 'ejs')
 .use(express.bodyParser())
-.use('/Public', express.static(__dirname + '/Public'))
-.get('/', controllers.index)
+// public source
+.use('/public/bootstrap', express.static(public_dir + '/bootstrap'))
+.use('/public/d3', express.static(public_dir + '/d3'))
+.use('/public/vis', express.static(public_dir + '/vis/dist'))
+.use('/public/custom', express.static(public_dir + '/custom'))
+// pages
+.get('/', controllers.renderIndex)
 .get('/newsline/:tag', controllers.renderTimeLine)
-.get('/data/:tag', controllers.getTag)
+// apis
+.get('/api/newsline/:tag', controllers.getNewsByTag)
+.get('/api/tags', controllers.getTags)
 .listen(port, host);
