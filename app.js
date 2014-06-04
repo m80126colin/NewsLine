@@ -10,6 +10,8 @@ var flash = require('connect-flash');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
+var public_dir	= __dirname + '/Public';
+var package_dir	= __dirname + '/node_modules';
 var controllers	= require('./Controllers');
 var app = express();
 
@@ -33,6 +35,11 @@ app.use(flash());
 
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+// public source
+app.use('/public/bootstrap', express.static(path.join(public_dir + '/bootstrap')));
+app.use('/public/d3', express.static(path.join(package_dir + '/d3')));
+app.use('/public/vis', express.static(path.join(package_dir + '/vis/dist')));
+app.use('/public/custom', express.static(path.join(public_dir + '/custom')));
 
 // development only
 if ('development' == app.get('env')) {
