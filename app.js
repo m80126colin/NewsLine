@@ -34,7 +34,7 @@ app.use(passport.session());
 app.use(flash());
 
 app.use(app.router);
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 // public source
 app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
 app.use('/public/d3', express.static(path.join(package_dir + '/d3')));
