@@ -10,7 +10,7 @@ express()
 .use(express.bodyParser())
 // public source
 .use('/public/bootstrap', express.static(public_dir + '/bootstrap'))
-.use('/public/d3', express.static(public_dir + '/d3'))
+.use('/public/d3', express.static(package_dir + '/d3'))
 .use('/public/vis', express.static(package_dir + '/vis/dist'))
 .use('/public/custom', express.static(public_dir + '/custom'))
 // pages
