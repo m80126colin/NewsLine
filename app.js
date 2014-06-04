@@ -10,12 +10,8 @@ var flash = require('connect-flash');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-require('./config/db'); // TODO [DB] : Connect to database
-require('./config/passport'); // TODO [FB] : Passport configuration
 var controllers	= require('./Controllers');
-
 var app = express();
-var Vote = mongoose.model('Vote'); // TODO [DB] : Get Vote model
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -26,8 +22,8 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser(process.env.COOKIE_SECRET));
-app.use(express.session());
+//app.use(express.cookieParser(process.env.COOKIE_SECRET));
+//app.use(express.session());
 
 // https://github.com/jaredhanson/passport#middleware
 app.use(passport.initialize());
@@ -48,6 +44,10 @@ app.get('/', controllers.renderIndex);
 //  var messages = req.flash('info');
 //  res.render('index', {messages: messages});
 //});
+app.get('/newsline/:tag', controllers.renderTimeLine);
+
+// apis
+app.get('/api/newsline/:tag', controllers.getNewsByTag);
 app.get('/api/tags', controllers.getTags);
 
 http.createServer(app).listen(app.get('port'), function(){
