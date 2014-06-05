@@ -23,7 +23,7 @@ module.exports.getNewsByTag = function(tag, col, callback) {
 		if (err) throw err;
 		db.collection(col)
 		.find({ 'tags': tag })
-		.limit(200)
+		//.limit(200)
 		.toArray(function (err, data) {
 			console.log(err);
 			callback(data);

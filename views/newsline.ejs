@@ -4,23 +4,43 @@
 	<meta http-equiv="Content-Type" content ="text/html"; charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><%= title %></title>
-	<link rel="stylesheet" href="../custom/css/style.css">
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../vis/dist/vis.min.css">
 	<link rel="stylesheet" href="../custom/css/newsline.css">
+	<link href="../custom/css/header.css" media="screen" rel="stylesheet">
+	<link href="../custom/css/footer.css" media="screen" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<!--render after linking data-->
-		<div id="tag-topic">Tag Topic</div>
-	</header>
-	<!-- timeline -->
-	<div id="timeline"></div>
-	<% include footer %>
+	<div class="container">
+		<% include header %>
+		<div class="row info">
+			<div class="col-md-6">
+				<div class="jumbotron">
+					<h1><%= tag %></h1>
+					<p>第一次出現時間: <span id="firsttime"></span></p>
+					<p>總篇數: <span id="total"></span></p>
+					<p>Tag 數量前 3 名:</p>
+					<p>1. <span id="tag1"></span></p>
+					<p>2. <span id="tag2"></span></p>
+					<p>3. <span id="tag3"></span></p>
+				</div>
+			</div>
+			<!-- column for pop up -->
+			<div class="col-md-6" id="popup"></div>
+		<div>
+		<div class="container">
+			<div class="row">
+				<!-- column here for timeline -->
+				<div class="col-md-12" id="timeline"></div>
+				<!-- end timeline column -->
+			</div>
+		</div>
+		<% include footer %>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="../custom/js/jquery-ui.min.js"></script>
 	<script src="../vis/dist/vis.min.js"></script>
-	<script src="../custom/js/algo.js"></script>
+	<script src="../custom/js/newsline.js"></script>
 	<!-- self JS -->
 	<script type="text/javascript">
 		$(document).ready(function() {

@@ -31,7 +31,7 @@ mongoClient.connect(url, function (err, db) {
 		}
 		var result = [];
 		for (var i in tag) {
-			tag[i].weight = tag[i].count * 1000000000 + tag[i].time;
+			tag[i].weight = Math.floor((tag[i].count * 1000000000 + tag[i].time) / 100000000);
 			result.push(tag[i]);
 		}
 		console.log('process complete!');
