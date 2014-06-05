@@ -4,7 +4,7 @@ $(function() {
 	var color	= d3.scale.category10();
 	var canvas	= d3.select('#bubble').append('svg')
 					.attr('width', 850)
-					.attr('height', 800)
+					.attr('height', 600)
 					.style('margin-left', '20px');
 	var tooltip	= d3.select('body')
 					.append('div')
