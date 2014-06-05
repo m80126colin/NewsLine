@@ -96,4 +96,5 @@ $(function() {
 			}
 		);
 	},200);
+	$('.btn-default').onclick(window.open("/newsline/"+$('.form-control').text(),"_self"));
 });
