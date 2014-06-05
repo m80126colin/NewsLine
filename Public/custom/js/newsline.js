@@ -28,7 +28,7 @@ var makeNews = function(data) {
 		res.push({
 			// group: 1,
 			start: new Date(data[i].time),
-			// content: '<a href="#' + i + '">#' + i + '</a> ' + data[i].title,
+			content: '<a href="#' + i + '">#' + i + '</a> ' + data[i].title,
 			type: 'point'
 		});
 	}
@@ -80,8 +80,8 @@ var setTimeLine = function(tag, id) {
 		else mxDate = new Date(yr, mon + 6);
 		var options = {
 			showCurrentTime: true,
-			height: '120px',
-			stack: false,
+			height: '200px',
+			//stack: false,
 			max: mxDate,
 			min: mnDate,
 			zoomMax: 10512000000,
@@ -93,7 +93,10 @@ var setTimeLine = function(tag, id) {
 		/*
 		 *
 		 */
-		$('#firsttime').text(new Date(data[0].time));
+		 var t = new Date(data[0].time);
+		$('#firsttime').text(t.getFullYear() + '年'
+			+ (t.getMonth() + 1) + '月' + t.getDate() + '日'
+			+ t.getHours() + '時' + t.getMinutes() + '分');
 		$('#total').text(data.length);
 		var t3 = tagSelectAlgo(data);
 		for (var i = 1; i <= 3; i++) {

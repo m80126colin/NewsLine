@@ -56,13 +56,13 @@ $(function() {
 			.style('cursor','pointer')
 			.style('font', function (d) {
 				var str = d.className + '';
-				var len = 6 - (str.length);
-				return (d.r * len / 6) + 'px 微軟雅黑體,Microsoft YaHei,微軟正黑體,Microsoft JhengHei,Comic Sans MS,sans-serif';
+				var len = 7 - (str.length);
+				return (d.r * len / 7) + 'px 微軟雅黑體,Microsoft YaHei,微軟正黑體,Microsoft JhengHei,Comic Sans MS,sans-serif';
 			})
 			.style('font-weight', function (d) {
 				var str = d.className + '';
-				var len = 6 - (str.length);
-				return (d.r * len / 6) <= 40? 'bold' : 'normal';
+				var len = 7 - (str.length);
+				return (d.r * len / 7) <= 40? 'bold' : 'normal';
 			})
 			.text(function (d) {
 				return d.children ? '': d.className;
