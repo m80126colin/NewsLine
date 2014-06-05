@@ -1,20 +1,17 @@
 {
-  "name": "NewsLine-hw5",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.4.8",
-    "ejs": "*",
-    "mongoose": "*",
-    "mongodb": "*",
-	"ejs": "*",
-	"vis": "*",
-	"d3": "*",
-    "connect-flash": "*",
-    "passport": "*",
-    "passport-facebook": "*"
-  }
+	"name": "NewsLine",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "3.2.5",
+		"mongodb": "*",
+		"ejs": "*",
+		"vis": "*",
+		"d3": "*",
+		"request": "*",
+		"cheerio": "*"
+	},
+	"scripts": {
+		"start": "node app.js"
+	}
 }
