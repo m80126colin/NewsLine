@@ -96,5 +96,8 @@ $(function() {
 			}
 		);
 	},200);
-	$('.btn-default').onclick(window.open("/newsline/"+$('.form-control').text(),"_self"));
+	$('.form-horizontal').submit(function (e) {
+		e.preventDefault();
+		window.open('/newsline/' + $('input').val(), '_self');
+	});
 });
