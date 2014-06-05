@@ -1,4 +1,4 @@
-var db = require('../Models');
+var db = require('../models');
 
 module.exports.renderIndex = function(req, res) {
 	var args	= {
