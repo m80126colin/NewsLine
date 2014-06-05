@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-	<title>NewsLine!</title>
-	<script src="d3/d3.min.js"></script>
+	<title><%= title %></title>
+	<link href="custom/css/index.css" media="screen" rel="stylesheet">
 	<link href="bootstrap/css/bootstrap.min.css" media="screen" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12"></div>
-			<div class="col-md-12"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8" id="bubble"></div>
-			<div class="col-md-2"></div>
+		<% include header %>
+		<div class="row main">
+			<div class="col-md-6" id="bubble"></div>
+			<div class="col-md-6">
+				<img class="logo" src="custom/img/logo.jpg"></img>	
+				<form class="form-inline search" role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="搜尋其他熱門議題或關鍵字"></input>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<nav class="navbar navbar-default" style="border-radius: 15px;" role="navigation">
-					<div class="container-fluid" style="padding-right: 0px;">
-					<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header"></div>
-						
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" style="width: 258px;margin-left: -20px;" placeholder="搜尋其他關鍵字"></input>
-							</div>
-							<div class="form-group">
-								<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 搜尋</button>
-							</div>
-						</form>
-					</div><!-- /.navbar-collapse -->
-				</nav>
-			</div><!-- /.container-fluid -->
+			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
 		</div>
+		<% include footer %>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="d3/d3.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="custom/js/home.js"></script>
+	<script src="custom/js/index.js"></script>
 </body>
