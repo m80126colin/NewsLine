@@ -9,12 +9,12 @@
 	<div class="container">
 		<% include header %>
 		<div class="row main">
-			<div class="col-md-6" id="bubble"></div>
-			<div class="col-md-6">
-				<img class="logo" src="/public/custom/img/logo.jpg"></img>	
-				<form class="form-inline search" role="form">
+			<div class="col-md-7" id="bubble"></div>
+			<div class="col-md-5">
+				<img class="logo" src="/public/custom/img/logo.jpg">
+				<form class="form-horizontal search" method="get" action="/newsline" role="form">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="搜尋其他熱門議題或關鍵字"></input>
+						<input type="text" class="form-control" placeholder="搜尋其他熱門議題或關鍵字">
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> 搜尋</button>

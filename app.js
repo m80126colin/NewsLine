@@ -25,7 +25,7 @@ app.use(express.bodyParser());
  *
  */
 app.use('/public/bootstrap', express.static(public_dir + '/bootstrap'));
-app.use('/public/d3', express.static(package_dir + '/d3'));
+app.use('/public/d3', express.static(public_dir + '/d3'));
 app.use('/public/vis', express.static(package_dir + '/vis/dist'));
 app.use('/public/custom', express.static(public_dir + '/custom'));
 

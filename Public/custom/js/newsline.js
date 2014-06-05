@@ -90,5 +90,14 @@ var setTimeLine = function(tag, id) {
 		var timeline = new vis.Timeline(container, null, options);
 		// timeline.setGroups(groups);
 		timeline.setItems(items);
+		/*
+		 *
+		 */
+		$('#firsttime').text(new Date(data[0].time));
+		$('#total').text(data.length);
+		var t3 = tagSelectAlgo(data);
+		for (var i = 1; i <= 3; i++) {
+			$('#tag' + i).text(t3[i].tag + '(' + t3[i].count + ')');
+		}
 	});
 }

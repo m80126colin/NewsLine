@@ -1,12 +1,9 @@
 div.main {
-	margin-top: 25px;
+	margin-top: 3rem;
 }
 
 img.logo {
 	width: 470px;
-	height: 290px;
-	margin-left: -235px;
-	margin-top: 15px;
 	opacity: 0.9;
 }
 
@@ -19,8 +16,7 @@ nav.form {
 }
 */
 
-
-form.search input {
-	width: 80%;
-	margin-left: -20px;
+form.search {
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
 }
