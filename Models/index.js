@@ -1,6 +1,6 @@
 var mongoClient	= require('mongodb').MongoClient,
-	format		= require('util').format;
-var url = 'mongodb://news_line:mycourseccspfinalproject1@ds057548.mongolab.com:57548/news_line';
+	format		= require('util').format,
+	url			= require('./config').getUrl();
 
 module.exports.getTags = function(col, callback) {
 	mongoClient.connect(url, function (err, db) {

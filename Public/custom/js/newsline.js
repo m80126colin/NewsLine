@@ -28,7 +28,7 @@ var makeNews = function(data) {
 		res.push({
 			// group: 1,
 			start: new Date(data[i].time),
-			content: '<a href="#' + i + '">#' + i + '</a> ' + data[i].title,
+			content: '<a href="' + data[i].url + '">#' + i + '</a> ' + data[i].title,
 			type: 'point'
 		});
 	}
